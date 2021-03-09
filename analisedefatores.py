@@ -1278,12 +1278,12 @@ class imporSA(Qt.QWidget):
             Fator1.append(float(row[1]))
         
         # Configuração de Visualização
-        sns.histplot(data,kde=True,stat='probability',color="black")
-        plt.xlabel('Numero aleatório')  
-        plt.ylabel('Fator')  
+        sns.histplot(data,color='black')
+        plt.xlabel('Fator')  
+        plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Normalizado", 
+        plt.title(label="Histograma", 
                     fontsize=30, 
                     color="Black") 
 
@@ -1305,12 +1305,12 @@ class imporSA(Qt.QWidget):
             Fator2.append(float(row[1]))
         
         # Configuração de Visualização
-        sns.histplot(data,kde=True,stat='probability',color="black")
-        plt.xlabel('Numero aleatório')  
-        plt.ylabel('Fator')  
+        sns.histplot(data,color='black')
+        plt.xlabel('Fator')  
+        plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Normalizado", 
+        plt.title(label="Histograma", 
                     fontsize=30, 
                     color="Black") 
 
@@ -1332,12 +1332,12 @@ class imporSA(Qt.QWidget):
             Fator3.append(float(row[1]))
         
         # Configuração de Visualização
-        sns.histplot(data,kde=True,stat='probability',color="black")
-        plt.xlabel('Numero aleatório')  
-        plt.ylabel('Fator')  
+        sns.histplot(data,color='black')
+        plt.xlabel('Fator')  
+        plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Normalizado", 
+        plt.title(label="Histograma", 
                     fontsize=30, 
                     color="Black") 
 
@@ -1359,12 +1359,12 @@ class imporSA(Qt.QWidget):
             Fator4.append(float(row[1]))
         
         # Configuração de Visualização
-        sns.histplot(data,kde=True,stat='probability',color="black")
-        plt.xlabel('Numero aleatório')  
-        plt.ylabel('Fator')  
+        sns.histplot(data,color='black')
+        plt.xlabel('Fator')  
+        plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Normalizado", 
+        plt.title(label="Histograma", 
                     fontsize=30, 
                     color="Black") 
 
@@ -1386,12 +1386,12 @@ class imporSA(Qt.QWidget):
             Fator5.append(float(row[1]))
         
         # Configuração de Visualização
-        sns.histplot(data,kde=True,stat='probability',color="black")
-        plt.xlabel('Numero aleatório')  
-        plt.ylabel('Fator')  
+        sns.histplot(data,color='black')
+        plt.xlabel('Fator')  
+        plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Normalizado", 
+        plt.title(label="Histograma", 
                     fontsize=30, 
                     color="Black") 
 
@@ -1413,12 +1413,12 @@ class imporSA(Qt.QWidget):
             Fator6.append(float(row[1]))
         
         # Configuração de Visualização
-        sns.histplot(data,kde=True,stat='probability',color="black")
-        plt.xlabel('Numero aleatório')  
-        plt.ylabel('Fator')  
+        sns.histplot(data,color='black')
+        plt.xlabel('Fator')  
+        plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Normalizado", 
+        plt.title(label="Histograma", 
                     fontsize=30, 
                     color="Black") 
 
@@ -1440,12 +1440,12 @@ class imporSA(Qt.QWidget):
             Fator7.append(float(row[1]))
         
         # Configuração de Visualização
-        sns.histplot(data,kde=True,stat='probability',color="black")
-        plt.xlabel('Numero aleatório')  
-        plt.ylabel('Fator')  
+        sns.histplot(data,color='black')
+        plt.xlabel('Fator')  
+        plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Normalizado", 
+        plt.title(label="Histograma", 
                     fontsize=30, 
                     color="Black") 
 
@@ -1467,12 +1467,12 @@ class imporSA(Qt.QWidget):
             Fator8.append(float(row[1]))
         
         # Configuração de Visualização
-        sns.histplot(data,kde=True,stat='probability',color="black")
-        plt.xlabel('Numero aleatório')  
-        plt.ylabel('Fator')  
+        sns.histplot(data,color='black')
+        plt.xlabel('Fator')  
+        plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Normalizado", 
+        plt.title(label="Histograma", 
                     fontsize=30, 
                     color="Black") 
 
@@ -1492,12 +1492,12 @@ class imporSA(Qt.QWidget):
             Fator9.append(float(row[1]))
         
         # Configuração de Visualização
-        sns.histplot(data,kde=True,stat='probability',color="black")
-        plt.xlabel('Numero aleatório')  
-        plt.ylabel('Fator')  
+        sns.histplot(data,color='black')
+        plt.xlabel('Fator')  
+        plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Normalizado", 
+        plt.title(label="Histograma", 
                     fontsize=30, 
                     color="Black") 
 
@@ -1519,12 +1519,12 @@ class imporSA(Qt.QWidget):
             Fator10.append(float(row[1]))
         
         # Configuração de Visualização
-        sns.histplot(data,kde=True,stat='probability',color="black")
-        plt.xlabel('Numero aleatório')  
-        plt.ylabel('Fator')  
+        sns.histplot(data,color='black')
+        plt.xlabel('Fator')  
+        plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Normalizado", 
+        plt.title(label="Histograma", 
                     fontsize=30, 
                     color="Black") 
 
@@ -1546,12 +1546,12 @@ class imporSA(Qt.QWidget):
             Fator11.append(float(row[1]))
         
         # Configuração de Visualização
-        sns.histplot(data,kde=True,stat='probability',color="black")
-        plt.xlabel('Numero aleatório')  
-        plt.ylabel('Fator')  
+        sns.histplot(data,color='black')
+        plt.xlabel('Fator')  
+        plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Normalizado", 
+        plt.title(label="Histograma", 
                     fontsize=30, 
                     color="Black") 
 

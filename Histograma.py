@@ -29,11 +29,11 @@ for row in result:
 
 # Configuração de Visualização
 sns.histplot(data,color='black')
-plt.xlabel('Numero aleatório')  
-plt.ylabel('Fator')  
+plt.xlabel('Fator')  
+plt.ylabel('Frequência')  
         
 # Configuração do título e cor do gráfico
-plt.title(label="Gráfico Normalizado", 
+plt.title(label="Histograma", 
             fontsize=30, 
             color="Black") 
 
