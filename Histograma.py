@@ -13,7 +13,8 @@ from matplotlib import style
 import random
 import scipy.stats as st
 from scipy.stats import norm
-import pandas as pd   
+import pandas as pd  
+import statistics
         
 # Conexão ao Banco de Dados Local
 conn = sqlite3.connect('coletabeta.db')
@@ -23,12 +24,23 @@ result = c.execute('SELECT Fator2 FROM Sa1')
 data = np.array(c.fetchall())
 
 ## dados do banco
-Fator2 = []
+Fator2 = [data]
 for row in result:
     Fator2.append(float(row[1]))
 
 # Configuração de Visualização
 sns.histplot(data,color='black')
+
+#print(Fator2)
+
+#Média
+m = statistics.mean(Fator2) 
+
+
+plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+plt.figtext(.75, .75, " Média", fontsize = 10)
+
+
 plt.xlabel('Fator')  
 plt.ylabel('Frequência')  
         

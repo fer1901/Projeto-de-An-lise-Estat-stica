@@ -34,6 +34,9 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from dateutil import parser
 from matplotlib import style
+import statistics
+import numpy as np
+import pandas as pd
 style.use('fivethirtyeight')
 
 #Classe da janela de análise
@@ -44,7 +47,7 @@ class imporSA(Qt.QWidget):
         self.title = 'Análise estatística de fatores'
         self.left = 0
         self.top = 0
-        self.width = 300
+        self.width = 200
         self.height = 200
    
         self.setWindowTitle(self.title) 
@@ -67,137 +70,137 @@ class imporSA(Qt.QWidget):
 
         self.tableWidget.setColumnCount(2)  
 
-        self.tableWidget.setHorizontalHeaderLabels(('Gráfico da Análise', 'Gráfico Normalizado da Análise'))
+        self.tableWidget.setHorizontalHeaderLabels(('Gráfico da Análise', 'Histograma da Análise'))
 
 #Botões dos Gráficos Normalizados
 
         btnFN1 = QPushButton(self.tableWidget)
-        btnFN1.setText('Gráfico Normalizado 1')
+        btnFN1.setText('Histograma do Fator 1')
         self.tableWidget.setCellWidget(0,1, btnFN1)
         btnFN1.clicked.connect(self.grafnormF1)
 
         btnFN2 = QPushButton(self.tableWidget)
-        btnFN2.setText('Gráfico Normalizado 2')
+        btnFN2.setText('Histograma do Fator 2')
         self.tableWidget.setCellWidget(1,1, btnFN2)
         btnFN2.clicked.connect(self.grafnormF2)
 
         btnFN3 = QPushButton(self.tableWidget)
-        btnFN3.setText('Gráfico Normalizado 3')
+        btnFN3.setText('Histograma do Fator 3')
         self.tableWidget.setCellWidget(2,1, btnFN3)
         btnFN3.clicked.connect(self.grafnormF3)
 
         btnFN4 = QPushButton(self.tableWidget)
-        btnFN4.setText('Gráfico Normalizado 4')
+        btnFN4.setText('Histograma do Fator 4')
         self.tableWidget.setCellWidget(3,1, btnFN4)
         btnFN4.clicked.connect(self.grafnormF4)
 
         btnFN5 = QPushButton(self.tableWidget)
-        btnFN5.setText('Gráfico Normalizado 5')
+        btnFN5.setText('Histograma do Fator 5')
         self.tableWidget.setCellWidget(4,1, btnFN5)
         btnFN5.clicked.connect(self.grafnormF5)
 
         btnFN6 = QPushButton(self.tableWidget)
-        btnFN6.setText('Gráfico Normalizado 6')
+        btnFN6.setText('Histograma do Fator 6')
         self.tableWidget.setCellWidget(5,1, btnFN6)
         btnFN6.clicked.connect(self.grafnormF6)
 
         btnFN7 = QPushButton(self.tableWidget)
-        btnFN7.setText('Gráfico Normalizado 7')
+        btnFN7.setText('Histograma do Fator 7')
         self.tableWidget.setCellWidget(6,1, btnFN7)
         btnFN7.clicked.connect(self.grafnormF7)
 
         btnFN8 = QPushButton(self.tableWidget)
-        btnFN8.setText('Gráfico Normalizado 8')
+        btnFN8.setText('Histograma do Fator 8')
         self.tableWidget.setCellWidget(7,1, btnFN8)
         btnFN8.clicked.connect(self.grafnormF8)
 
         btnFN9 = QPushButton(self.tableWidget)
-        btnFN9.setText('Gráfico Normalizado 9')
+        btnFN9.setText('Histograma do Fator 9')
         self.tableWidget.setCellWidget(8,1, btnFN9)
         btnFN9.clicked.connect(self.grafnormF9)
 
         btnFN10 = QPushButton(self.tableWidget)
-        btnFN10.setText('Gráfico Normalizado 10')
+        btnFN10.setText('Histograma do Fator 10')
         self.tableWidget.setCellWidget(9,1, btnFN10)
         btnFN10.clicked.connect(self.grafnormF10)
 
         btnFN11 = QPushButton(self.tableWidget)
-        btnFN11.setText('Gráfico Normalizado 11')
+        btnFN11.setText('Histograma do Fator 11')
         self.tableWidget.setCellWidget(10,1, btnFN11)
         btnFN11.clicked.connect(self.grafnormF11)
 
         btnFN12 = QPushButton(self.tableWidget)
-        btnFN12.setText('Gráfico Normalizado 12')
+        btnFN12.setText('Histograma do Fator 12')
         self.tableWidget.setCellWidget(11,1, btnFN12)
         btnFN12.clicked.connect(self.grafnormF12)
 
         btnFN13 = QPushButton(self.tableWidget)
-        btnFN13.setText('Gráfico Normalizado 13')
+        btnFN13.setText('Histograma do Fator 13')
         self.tableWidget.setCellWidget(12,1, btnFN13)
         btnFN13.clicked.connect(self.grafnormF13)
 
         btnFN14 = QPushButton(self.tableWidget)
-        btnFN14.setText('Gráfico Normalizado 14')
+        btnFN14.setText('Histograma do Fator 14')
         self.tableWidget.setCellWidget(13,1, btnFN14)
         btnFN14.clicked.connect(self.grafnormF14)
 
         btnFN15 = QPushButton(self.tableWidget)
-        btnFN15.setText('Gráfico Normalizado 15')
+        btnFN15.setText('Histograma do Fator 15')
         self.tableWidget.setCellWidget(14,1, btnFN15)
         btnFN15.clicked.connect(self.grafnormF15)
 
         btnFN16 = QPushButton(self.tableWidget)
-        btnFN16.setText('Gráfico Normalizado 16')
+        btnFN16.setText('Histograma do Fator 16')
         self.tableWidget.setCellWidget(15,1, btnFN16)
         btnFN16.clicked.connect(self.grafnormF16)
 
         btnFN17 = QPushButton(self.tableWidget)
-        btnFN17.setText('Gráfico Normalizado 17')
+        btnFN17.setText('Histograma do Fator 17')
         self.tableWidget.setCellWidget(16,1, btnFN17)
         btnFN17.clicked.connect(self.grafnormF17)
 
         btnFN18 = QPushButton(self.tableWidget)
-        btnFN18.setText('Gráfico Normalizado 18')
+        btnFN18.setText('Histograma do Fator 18')
         self.tableWidget.setCellWidget(17,1, btnFN18)
         btnFN18.clicked.connect(self.grafnormF18)
 
         btnFN19 = QPushButton(self.tableWidget)
-        btnFN19.setText('Gráfico Normalizado 19')
+        btnFN19.setText('Histograma do Fator 19')
         self.tableWidget.setCellWidget(18,1, btnFN19)
         btnFN19.clicked.connect(self.grafnormF19)
 
         btnFN20 = QPushButton(self.tableWidget)
-        btnFN20.setText('Gráfico Normalizado 20')
+        btnFN20.setText('Histograma do Fator 20')
         self.tableWidget.setCellWidget(19,1, btnFN20)
         btnFN20.clicked.connect(self.grafnormF20)
 
         btnFN21 = QPushButton(self.tableWidget)
-        btnFN21.setText('Gráfico Normalizado 21')
+        btnFN21.setText('Histograma do Fator 21')
         self.tableWidget.setCellWidget(20,1, btnFN21)
         btnFN21.clicked.connect(self.grafnormF21)
 
         btnFN22 = QPushButton(self.tableWidget)
-        btnFN22.setText('Gráfico Normalizado 22')
+        btnFN22.setText('Histograma do Fator 22')
         self.tableWidget.setCellWidget(21,1, btnFN22)
         btnFN22.clicked.connect(self.grafnormF22)
 
         btnFN23 = QPushButton(self.tableWidget)
-        btnFN23.setText('Gráfico Normalizado 23')
+        btnFN23.setText('Histograma do Fator 23')
         self.tableWidget.setCellWidget(22,1, btnFN23)
         btnFN23.clicked.connect(self.grafnormF23)
 
         btnFN24 = QPushButton(self.tableWidget)
-        btnFN24.setText('Gráfico Normalizado 24')
+        btnFN24.setText('Histograma do Fator 24')
         self.tableWidget.setCellWidget(23,1, btnFN24)
         btnFN24.clicked.connect(self.grafnormF24)
 
         btnFN25 = QPushButton(self.tableWidget)
-        btnFN25.setText('Gráfico Normalizado 25')
+        btnFN25.setText('Histograma do Fator 25')
         self.tableWidget.setCellWidget(24,1, btnFN25)
         btnFN25.clicked.connect(self.grafnormF25)
 
         btnFN26 = QPushButton(self.tableWidget)
-        btnFN26.setText('Gráfico Normalizado 26')
+        btnFN26.setText('Histograma do Fator 26')
         self.tableWidget.setCellWidget(25,1, btnFN26)
         btnFN26.clicked.connect(self.grafnormF26)
 
@@ -360,12 +363,48 @@ class imporSA(Qt.QWidget):
 
         # Configuração de Visualização
         plt.plot(Id, Fator1, '-', color='Blue')  
+
+        #Média
+        m = statistics.mean(Fator1) 
+
+        #variância
+        v = statistics.pvariance(Fator1)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator1)
+
+        #Mínimo 
+        mi = statistics.median_low(Fator1)
+
+        #Máximo
+        ma = statistics.median_high(Fator1)
+
+        #Erro Padrão
+        er = np.std(Fator1, ddof=1) / np.sqrt(np.size(Fator1))
+
+
+        plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.75, .75, " Média", fontsize = 10)
+        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.75, .70, " Variância", fontsize = 10)
+        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.75, .60, " Mínimo", fontsize = 10)
+        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.75, .55, " Máximo", fontsize = 10)
+        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
+        plt.figtext(.87, .50, str(er), fontsize = 10)
+        
+    
         plt.xlabel('Numero de análises')  
-        plt.ylabel('Fator')  
+  
+        plt.ylabel('Fator 1')  
         
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Nº de análises x Fator", 
-                fontsize=30, 
+        plt.title(label="Gráfico Nº de análises x Fator 1", 
+                fontsize=20, 
                 color="Black") 
 
         plt.show()
@@ -392,12 +431,47 @@ class imporSA(Qt.QWidget):
 
                 # Configuração de Visualização
         plt.plot(Id, Fator2, '-', color='Blue')  
+        #Média
+        m = statistics.mean(Fator2) 
+
+        #variância
+        v = statistics.pvariance(Fator2)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator2)
+
+        #Mínimo 
+        mi = statistics.median_low(Fator2)
+
+        #Máximo
+        ma = statistics.median_high(Fator2)
+
+        #Erro Padrão
+        er = np.std(Fator2, ddof=1) / np.sqrt(np.size(Fator2))
+
+
+        plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.75, .75, " Média", fontsize = 10)
+        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.75, .70, " Variância", fontsize = 10)
+        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.75, .60, " Mínimo", fontsize = 10)
+        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.75, .55, " Máximo", fontsize = 10)
+        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
+        plt.figtext(.87, .50, str(er), fontsize = 10)
+        
+    
         plt.xlabel('Numero de análises')  
-        plt.ylabel('Fator')  
+  
+        plt.ylabel('Fator 1')  
         
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Nº de análises x Fator", 
-                fontsize=30, 
+        plt.title(label="Gráfico Nº de análises x Fator 1", 
+                fontsize=20, 
                 color="Black")
         plt.show()
 
@@ -423,12 +497,47 @@ class imporSA(Qt.QWidget):
 
                 # Configuração de Visualização
         plt.plot(Id, Fator3, '-', color='Blue')  
+        #Média
+        m = statistics.mean(Fator3) 
+
+        #variância
+        v = statistics.pvariance(Fator3)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator3)
+
+        #Mínimo 
+        mi = statistics.median_low(Fator3)
+
+        #Máximo
+        ma = statistics.median_high(Fator3)
+
+        #Erro Padrão
+        er = np.std(Fator3, ddof=1) / np.sqrt(np.size(Fator3))
+
+
+        plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.75, .75, " Média", fontsize = 10)
+        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.75, .70, " Variância", fontsize = 10)
+        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.75, .60, " Mínimo", fontsize = 10)
+        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.75, .55, " Máximo", fontsize = 10)
+        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
+        plt.figtext(.87, .50, str(er), fontsize = 10)
+        
+    
         plt.xlabel('Numero de análises')  
-        plt.ylabel('Fator')  
+  
+        plt.ylabel('Fator 3')  
         
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Nº de análises x Fator", 
-                fontsize=30, 
+        plt.title(label="Gráfico Nº de análises x Fator 3", 
+                fontsize=20, 
                 color="Black")
         plt.show()
 
@@ -454,12 +563,48 @@ class imporSA(Qt.QWidget):
 
                 # Configuração de Visualização
         plt.plot(Id, Fator4, '-', color='Blue')  
+
+        #Média
+        m = statistics.mean(Fator4) 
+
+        #variância
+        v = statistics.pvariance(Fator4)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator4)
+
+        #Mínimo 
+        mi = statistics.median_low(Fator4)
+
+        #Máximo
+        ma = statistics.median_high(Fator4)
+
+        #Erro Padrão
+        er = np.std(Fator4, ddof=1) / np.sqrt(np.size(Fator4))
+
+
+        plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.75, .75, " Média", fontsize = 10)
+        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.75, .70, " Variância", fontsize = 10)
+        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.75, .60, " Mínimo", fontsize = 10)
+        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.75, .55, " Máximo", fontsize = 10)
+        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
+        plt.figtext(.87, .50, str(er), fontsize = 10)
+        
+    
         plt.xlabel('Numero de análises')  
-        plt.ylabel('Fator')  
+  
+        plt.ylabel('Fator 4')  
         
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Nº de análises x Fator", 
-                fontsize=30, 
+        plt.title(label="Gráfico Nº de análises x Fator 4", 
+                fontsize=20, 
                 color="Black")
 
         plt.show()
@@ -486,12 +631,47 @@ class imporSA(Qt.QWidget):
 
                 # Configuração de Visualização
         plt.plot(Id, Fator5, '-', color='Blue')  
+        #Média
+        m = statistics.mean(Fator5) 
+
+        #variância
+        v = statistics.pvariance(Fator5)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator5)
+
+        #Mínimo 
+        mi = statistics.median_low(Fator5)
+
+        #Máximo
+        ma = statistics.median_high(Fator5)
+
+        #Erro Padrão
+        er = np.std(Fator5, ddof=1) / np.sqrt(np.size(Fator5))
+
+
+        plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.75, .75, " Média", fontsize = 10)
+        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.75, .70, " Variância", fontsize = 10)
+        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.75, .60, " Mínimo", fontsize = 10)
+        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.75, .55, " Máximo", fontsize = 10)
+        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
+        plt.figtext(.87, .50, str(er), fontsize = 10)
+        
+    
         plt.xlabel('Numero de análises')  
-        plt.ylabel('Fator')  
+  
+        plt.ylabel('Fator 5')  
         
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Nº de análises x Fator", 
-                fontsize=30, 
+        plt.title(label="Gráfico Nº de análises x Fator 5", 
+                fontsize=20, 
                 color="Black")
 
         plt.show()
@@ -518,12 +698,47 @@ class imporSA(Qt.QWidget):
 
         # Configuração de Visualização
         plt.plot(Id, Fator6, '-', color='Blue')  
+        #Média
+        m = statistics.mean(Fator6) 
+
+        #variância
+        v = statistics.pvariance(Fator6)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator6)
+
+        #Mínimo 
+        mi = statistics.median_low(Fator6)
+
+        #Máximo
+        ma = statistics.median_high(Fator6)
+
+        #Erro Padrão
+        er = np.std(Fator6, ddof=1) / np.sqrt(np.size(Fator6))
+
+
+        plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.75, .75, " Média", fontsize = 10)
+        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.75, .70, " Variância", fontsize = 10)
+        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.75, .60, " Mínimo", fontsize = 10)
+        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.75, .55, " Máximo", fontsize = 10)
+        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
+        plt.figtext(.87, .50, str(er), fontsize = 10)
+        
+    
         plt.xlabel('Numero de análises')  
-        plt.ylabel('Fator')  
+  
+        plt.ylabel('Fator 6')  
         
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Nº de análises x Fator", 
-                fontsize=30, 
+        plt.title(label="Gráfico Nº de análises x Fator 6", 
+                fontsize=20, 
                 color="Black")
 
         plt.show()
@@ -550,12 +765,47 @@ class imporSA(Qt.QWidget):
 
         # Configuração de Visualização
         plt.plot(Id, Fator7, '-', color='Blue')  
+        #Média
+        m = statistics.mean(Fator7) 
+
+        #variância
+        v = statistics.pvariance(Fator7)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator7)
+
+        #Mínimo 
+        mi = statistics.median_low(Fator7)
+
+        #Máximo
+        ma = statistics.median_high(Fator7)
+
+        #Erro Padrão
+        er = np.std(Fator7, ddof=1) / np.sqrt(np.size(Fator7))
+
+
+        plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.75, .75, " Média", fontsize = 10)
+        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.75, .70, " Variância", fontsize = 10)
+        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.75, .60, " Mínimo", fontsize = 10)
+        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.75, .55, " Máximo", fontsize = 10)
+        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
+        plt.figtext(.87, .50, str(er), fontsize = 10)
+        
+    
         plt.xlabel('Numero de análises')  
-        plt.ylabel('Fator')  
+  
+        plt.ylabel('Fator 7')  
         
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Nº de análises x Fator", 
-                fontsize=30, 
+        plt.title(label="Gráfico Nº de análises x Fator 7", 
+                fontsize=20, 
                 color="Black")
         plt.show()
 
@@ -581,12 +831,47 @@ class imporSA(Qt.QWidget):
 
                 # Configuração de Visualização
         plt.plot(Id, Fator8, '-', color='Blue')  
+        #Média
+        m = statistics.mean(Fator8) 
+
+        #variância
+        v = statistics.pvariance(Fator8)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator8)
+
+        #Mínimo 
+        mi = statistics.median_low(Fator8)
+
+        #Máximo
+        ma = statistics.median_high(Fator8)
+
+        #Erro Padrão
+        er = np.std(Fator8, ddof=1) / np.sqrt(np.size(Fator8))
+
+
+        plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.75, .75, " Média", fontsize = 10)
+        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.75, .70, " Variância", fontsize = 10)
+        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.75, .60, " Mínimo", fontsize = 10)
+        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.75, .55, " Máximo", fontsize = 10)
+        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
+        plt.figtext(.87, .50, str(er), fontsize = 10)
+        
+    
         plt.xlabel('Numero de análises')  
-        plt.ylabel('Fator')  
+  
+        plt.ylabel('Fator 8')  
         
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Nº de análises x Fator", 
-                fontsize=30, 
+        plt.title(label="Gráfico Nº de análises x Fator 8", 
+                fontsize=20, 
                 color="Black")
         plt.show()
 
@@ -612,12 +897,47 @@ class imporSA(Qt.QWidget):
 
                 # Configuração de Visualização
         plt.plot(Id, Fator9, '-', color='Blue')  
+        #Média
+        m = statistics.mean(Fator9) 
+
+        #variância
+        v = statistics.pvariance(Fator9)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator9)
+
+        #Mínimo 
+        mi = statistics.median_low(Fator9)
+
+        #Máximo
+        ma = statistics.median_high(Fator9)
+
+        #Erro Padrão
+        er = np.std(Fator9, ddof=1) / np.sqrt(np.size(Fator9))
+
+
+        plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.75, .75, " Média", fontsize = 10)
+        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.75, .70, " Variância", fontsize = 10)
+        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.75, .60, " Mínimo", fontsize = 10)
+        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.75, .55, " Máximo", fontsize = 10)
+        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
+        plt.figtext(.87, .50, str(er), fontsize = 10)
+        
+    
         plt.xlabel('Numero de análises')  
-        plt.ylabel('Fator')  
+  
+        plt.ylabel('Fator 9')  
         
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Nº de análises x Fator", 
-                fontsize=30, 
+        plt.title(label="Gráfico Nº de análises x Fator 9", 
+                fontsize=20, 
                 color="Black")
 
         plt.show()
@@ -644,12 +964,47 @@ class imporSA(Qt.QWidget):
 
                 # Configuração de Visualização
         plt.plot(Id, Fator10, '-', color='Blue')  
+        #Média
+        m = statistics.mean(Fator10) 
+
+        #variância
+        v = statistics.pvariance(Fator10)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator10)
+
+        #Mínimo 
+        mi = statistics.median_low(Fator10)
+
+        #Máximo
+        ma = statistics.median_high(Fator10)
+
+        #Erro Padrão
+        er = np.std(Fator10, ddof=1) / np.sqrt(np.size(Fator10))
+
+
+        plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.75, .75, " Média", fontsize = 10)
+        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.75, .70, " Variância", fontsize = 10)
+        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.75, .60, " Mínimo", fontsize = 10)
+        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.75, .55, " Máximo", fontsize = 10)
+        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
+        plt.figtext(.87, .50, str(er), fontsize = 10)
+        
+    
         plt.xlabel('Numero de análises')  
+  
         plt.ylabel('Fator')  
         
         # Configuração do título e cor do gráfico
         plt.title(label="Gráfico Nº de análises x Fator", 
-                fontsize=30, 
+                fontsize=20, 
                 color="Black")
 
         plt.show()
@@ -676,12 +1031,47 @@ class imporSA(Qt.QWidget):
 
         # Configuração de Visualização
         plt.plot(Id, Fator11, '-', color='Blue')  
+        #Média
+        m = statistics.mean(Fator11) 
+
+        #variância
+        v = statistics.pvariance(Fator11)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator11)
+
+        #Mínimo 
+        mi = statistics.median_low(Fator11)
+
+        #Máximo
+        ma = statistics.median_high(Fator11)
+
+        #Erro Padrão
+        er = np.std(Fator11, ddof=1) / np.sqrt(np.size(Fator11))
+
+
+        plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.75, .75, " Média", fontsize = 10)
+        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.75, .70, " Variância", fontsize = 10)
+        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.75, .60, " Mínimo", fontsize = 10)
+        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.75, .55, " Máximo", fontsize = 10)
+        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
+        plt.figtext(.87, .50, str(er), fontsize = 10)
+        
+    
         plt.xlabel('Numero de análises')  
-        plt.ylabel('Fator')  
+  
+        plt.ylabel('Fator 11')  
         
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Nº de análises x Fator", 
-                fontsize=30, 
+        plt.title(label="Gráfico Nº de análises x Fator 11", 
+                fontsize=20, 
                 color="Black")
 
         plt.show()
@@ -708,12 +1098,47 @@ class imporSA(Qt.QWidget):
 
         # Configuração de Visualização
         plt.plot(Id, Fator12, '-', color='Blue')  
+        #Média
+        m = statistics.mean(Fator12) 
+
+        #variância
+        v = statistics.pvariance(Fator12)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator12)
+
+        #Mínimo 
+        mi = statistics.median_low(Fator12)
+
+        #Máximo
+        ma = statistics.median_high(Fator12)
+
+        #Erro Padrão
+        er = np.std(Fator12, ddof=1) / np.sqrt(np.size(Fator12))
+
+
+        plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.75, .75, " Média", fontsize = 10)
+        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.75, .70, " Variância", fontsize = 10)
+        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.75, .60, " Mínimo", fontsize = 10)
+        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.75, .55, " Máximo", fontsize = 10)
+        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
+        plt.figtext(.87, .50, str(er), fontsize = 10)
+        
+    
         plt.xlabel('Numero de análises')  
-        plt.ylabel('Fator')  
+  
+        plt.ylabel('Fator 12')  
         
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Nº de análises x Fator", 
-                fontsize=30, 
+        plt.title(label="Gráfico Nº de análises x Fator 12", 
+                fontsize=20, 
                 color="Black")
 
         plt.show()
@@ -740,12 +1165,47 @@ class imporSA(Qt.QWidget):
 
         # Configuração de Visualização
         plt.plot(Id, Fator13, '-', color='Blue')  
+        #Média
+        m = statistics.mean(Fator13) 
+
+        #variância
+        v = statistics.pvariance(Fator13)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator13)
+
+        #Mínimo 
+        mi = statistics.median_low(Fator13)
+
+        #Máximo
+        ma = statistics.median_high(Fator13)
+
+        #Erro Padrão
+        er = np.std(Fator13, ddof=1) / np.sqrt(np.size(Fator13))
+
+
+        plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.75, .75, " Média", fontsize = 10)
+        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.75, .70, " Variância", fontsize = 10)
+        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.75, .60, " Mínimo", fontsize = 10)
+        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.75, .55, " Máximo", fontsize = 10)
+        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
+        plt.figtext(.87, .50, str(er), fontsize = 10)
+        
+    
         plt.xlabel('Numero de análises')  
-        plt.ylabel('Fator')  
+  
+        plt.ylabel('Fator 13')  
         
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Nº de análises x Fator", 
-                fontsize=30, 
+        plt.title(label="Gráfico Nº de análises x Fator 13", 
+                fontsize=20, 
                 color="Black")
                 
         plt.show()
@@ -772,12 +1232,47 @@ class imporSA(Qt.QWidget):
 
                 # Configuração de Visualização
         plt.plot(Id, Fator14, '-', color='Blue')  
+        #Média
+        m = statistics.mean(Fator14) 
+
+        #variância
+        v = statistics.pvariance(Fator14)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator14)
+
+        #Mínimo 
+        mi = statistics.median_low(Fator14)
+
+        #Máximo
+        ma = statistics.median_high(Fator14)
+
+        #Erro Padrão
+        er = np.std(Fator14, ddof=1) / np.sqrt(np.size(Fator14))
+
+
+        plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.75, .75, " Média", fontsize = 10)
+        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.75, .70, " Variância", fontsize = 10)
+        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.75, .60, " Mínimo", fontsize = 10)
+        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.75, .55, " Máximo", fontsize = 10)
+        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
+        plt.figtext(.87, .50, str(er), fontsize = 10)
+        
+    
         plt.xlabel('Numero de análises')  
-        plt.ylabel('Fator')  
+  
+        plt.ylabel('Fator 14')  
         
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Nº de análises x Fator", 
-                fontsize=30, 
+        plt.title(label="Gráfico Nº de análises x Fator 14", 
+                fontsize=20, 
                 color="Black")
 
         plt.show()
@@ -804,12 +1299,47 @@ class imporSA(Qt.QWidget):
 
         # Configuração de Visualização
         plt.plot(Id, Fator15, '-', color='Blue')  
+        #Média
+        m = statistics.mean(Fator15) 
+
+        #variância
+        v = statistics.pvariance(Fator15)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator15)
+
+        #Mínimo 
+        mi = statistics.median_low(Fator15)
+
+        #Máximo
+        ma = statistics.median_high(Fator15)
+
+        #Erro Padrão
+        er = np.std(Fator15, ddof=1) / np.sqrt(np.size(Fator15))
+
+
+        plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.75, .75, " Média", fontsize = 10)
+        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.75, .70, " Variância", fontsize = 10)
+        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.75, .60, " Mínimo", fontsize = 10)
+        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.75, .55, " Máximo", fontsize = 10)
+        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
+        plt.figtext(.87, .50, str(er), fontsize = 10)
+        
+    
         plt.xlabel('Numero de análises')  
-        plt.ylabel('Fator')  
+  
+        plt.ylabel('Fator 15')  
         
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Nº de análises x Fator", 
-                fontsize=30, 
+        plt.title(label="Gráfico Nº de análises x Fator 15", 
+                fontsize=20, 
                 color="Black")
 
         plt.show()
@@ -836,12 +1366,47 @@ class imporSA(Qt.QWidget):
 
         # Configuração de Visualização
         plt.plot(Id, Fator16, '-', color='Blue')  
+        #Média
+        m = statistics.mean(Fator16) 
+
+        #variância
+        v = statistics.pvariance(Fator16)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator16)
+
+        #Mínimo 
+        mi = statistics.median_low(Fator16)
+
+        #Máximo
+        ma = statistics.median_high(Fator16)
+
+        #Erro Padrão
+        er = np.std(Fator16, ddof=1) / np.sqrt(np.size(Fator16))
+
+
+        plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.75, .75, " Média", fontsize = 10)
+        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.75, .70, " Variância", fontsize = 10)
+        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.75, .60, " Mínimo", fontsize = 10)
+        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.75, .55, " Máximo", fontsize = 10)
+        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
+        plt.figtext(.87, .50, str(er), fontsize = 10)
+        
+    
         plt.xlabel('Numero de análises')  
-        plt.ylabel('Fator')  
+  
+        plt.ylabel('Fator 16')  
         
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Nº de análises x Fator", 
-                fontsize=30, 
+        plt.title(label="Gráfico Nº de análises x Fator 16", 
+                fontsize=20, 
                 color="Black")
 
         plt.show()
@@ -868,12 +1433,47 @@ class imporSA(Qt.QWidget):
 
                 # Configuração de Visualização
         plt.plot(Id, Fator17, '-', color='Blue')  
+        #Média
+        m = statistics.mean(Fator17) 
+
+        #variância
+        v = statistics.pvariance(Fator17)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator17)
+
+        #Mínimo 
+        mi = statistics.median_low(Fator17)
+
+        #Máximo
+        ma = statistics.median_high(Fator17)
+
+        #Erro Padrão
+        er = np.std(Fator17, ddof=1) / np.sqrt(np.size(Fator17))
+
+
+        plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.75, .75, " Média", fontsize = 10)
+        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.75, .70, " Variância", fontsize = 10)
+        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.75, .60, " Mínimo", fontsize = 10)
+        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.75, .55, " Máximo", fontsize = 10)
+        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
+        plt.figtext(.87, .50, str(er), fontsize = 10)
+        
+    
         plt.xlabel('Numero de análises')  
-        plt.ylabel('Fator')  
+  
+        plt.ylabel('Fator 17')  
         
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Nº de análises x Fator", 
-                fontsize=30, 
+        plt.title(label="Gráfico Nº de análises x Fator 17", 
+                fontsize=20, 
                 color="Black")
 
         plt.show()
@@ -900,12 +1500,47 @@ class imporSA(Qt.QWidget):
 
                 # Configuração de Visualização
         plt.plot(Id, Fator18, '-', color='Blue')  
+        #Média
+        m = statistics.mean(Fator18) 
+
+        #variância
+        v = statistics.pvariance(Fator18)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator18)
+
+        #Mínimo 
+        mi = statistics.median_low(Fator18)
+
+        #Máximo
+        ma = statistics.median_high(Fator18)
+
+        #Erro Padrão
+        er = np.std(Fator18, ddof=1) / np.sqrt(np.size(Fator18))
+
+
+        plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.75, .75, " Média", fontsize = 10)
+        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.75, .70, " Variância", fontsize = 10)
+        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.75, .60, " Mínimo", fontsize = 10)
+        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.75, .55, " Máximo", fontsize = 10)
+        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
+        plt.figtext(.87, .50, str(er), fontsize = 10)
+        
+    
         plt.xlabel('Numero de análises')  
-        plt.ylabel('Fator')  
+  
+        plt.ylabel('Fator 18')  
         
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Nº de análises x Fator", 
-                fontsize=30, 
+        plt.title(label="Gráfico Nº de análises x Fator 18", 
+                fontsize=20, 
                 color="Black")
 
         plt.show()
@@ -932,12 +1567,47 @@ class imporSA(Qt.QWidget):
 
         # Configuração de Visualização
         plt.plot(Id, Fator19, '-', color='Blue')  
+        #Média
+        m = statistics.mean(Fator19) 
+
+        #variância
+        v = statistics.pvariance(Fator19)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator19)
+
+        #Mínimo 
+        mi = statistics.median_low(Fator19)
+
+        #Máximo
+        ma = statistics.median_high(Fator19)
+
+        #Erro Padrão
+        er = np.std(Fator19, ddof=1) / np.sqrt(np.size(Fator19))
+
+
+        plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.75, .75, " Média", fontsize = 10)
+        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.75, .70, " Variância", fontsize = 10)
+        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.75, .60, " Mínimo", fontsize = 10)
+        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.75, .55, " Máximo", fontsize = 10)
+        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
+        plt.figtext(.87, .50, str(er), fontsize = 10)
+        
+    
         plt.xlabel('Numero de análises')  
-        plt.ylabel('Fator')  
+  
+        plt.ylabel('Fator 19')  
         
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Nº de análises x Fator", 
-                fontsize=30, 
+        plt.title(label="Gráfico Nº de análises x Fator 19", 
+                fontsize=20, 
                 color="Black")
 
         plt.show()
@@ -964,12 +1634,47 @@ class imporSA(Qt.QWidget):
 
         # Configuração de Visualização
         plt.plot(Id, Fator20, '-', color='Blue')  
+        #Média
+        m = statistics.mean(Fator20) 
+
+        #variância
+        v = statistics.pvariance(Fator20)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator20)
+
+        #Mínimo 
+        mi = statistics.median_low(Fator20)
+
+        #Máximo
+        ma = statistics.median_high(Fator20)
+
+        #Erro Padrão
+        er = np.std(Fator20, ddof=1) / np.sqrt(np.size(Fator20))
+
+
+        plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.75, .75, " Média", fontsize = 10)
+        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.75, .70, " Variância", fontsize = 10)
+        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.75, .60, " Mínimo", fontsize = 10)
+        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.75, .55, " Máximo", fontsize = 10)
+        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
+        plt.figtext(.87, .50, str(er), fontsize = 10)
+        
+    
         plt.xlabel('Numero de análises')  
-        plt.ylabel('Fator')  
+  
+        plt.ylabel('Fator 20')  
         
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Nº de análises x Fator", 
-                fontsize=30, 
+        plt.title(label="Gráfico Nº de análises x Fator 20", 
+                fontsize=20, 
                 color="Black")
 
         plt.show()
@@ -996,12 +1701,47 @@ class imporSA(Qt.QWidget):
 
                 # Configuração de Visualização
         plt.plot(Id, Fator21, '-', color='Blue')  
+        #Média
+        m = statistics.mean(Fator21) 
+
+        #variância
+        v = statistics.pvariance(Fator21)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator21)
+
+        #Mínimo 
+        mi = statistics.median_low(Fator21)
+
+        #Máximo
+        ma = statistics.median_high(Fator21)
+
+        #Erro Padrão
+        er = np.std(Fator21, ddof=1) / np.sqrt(np.size(Fator21))
+
+
+        plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.75, .75, " Média", fontsize = 10)
+        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.75, .70, " Variância", fontsize = 10)
+        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.75, .60, " Mínimo", fontsize = 10)
+        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.75, .55, " Máximo", fontsize = 10)
+        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
+        plt.figtext(.87, .50, str(er), fontsize = 10)
+        
+    
         plt.xlabel('Numero de análises')  
-        plt.ylabel('Fator')  
+  
+        plt.ylabel('Fator 21')  
         
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Nº de análises x Fator", 
-                fontsize=30, 
+        plt.title(label="Gráfico Nº de análises x Fator 21", 
+                fontsize=20, 
                 color="Black")
 
         plt.show()
@@ -1028,12 +1768,47 @@ class imporSA(Qt.QWidget):
 
                 # Configuração de Visualização
         plt.plot(Id, Fator22, '-', color='Blue')  
+        #Média
+        m = statistics.mean(Fator22) 
+
+        #variância
+        v = statistics.pvariance(Fator22)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator22)
+
+        #Mínimo 
+        mi = statistics.median_low(Fator22)
+
+        #Máximo
+        ma = statistics.median_high(Fator22)
+
+        #Erro Padrão
+        er = np.std(Fator22, ddof=1) / np.sqrt(np.size(Fator22))
+
+
+        plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.75, .75, " Média", fontsize = 10)
+        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.75, .70, " Variância", fontsize = 10)
+        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.75, .60, " Mínimo", fontsize = 10)
+        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.75, .55, " Máximo", fontsize = 10)
+        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
+        plt.figtext(.87, .50, str(er), fontsize = 10)
+        
+    
         plt.xlabel('Numero de análises')  
-        plt.ylabel('Fator')  
+  
+        plt.ylabel('Fator 22')  
         
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Nº de análises x Fator", 
-                fontsize=30, 
+        plt.title(label="Gráfico Nº de análises x Fator 22", 
+                fontsize=20, 
                 color="Black")
         plt.show()
 
@@ -1059,12 +1834,47 @@ class imporSA(Qt.QWidget):
 
                 # Configuração de Visualização
         plt.plot(Id, Fator23, '-', color='Blue')  
+        #Média
+        m = statistics.mean(Fator23) 
+
+        #variância
+        v = statistics.pvariance(Fator23)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator23)
+
+        #Mínimo 
+        mi = statistics.median_low(Fator23)
+
+        #Máximo
+        ma = statistics.median_high(Fator23)
+
+        #Erro Padrão
+        er = np.std(Fator23, ddof=1) / np.sqrt(np.size(Fator23))
+
+
+        plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.75, .75, " Média", fontsize = 10)
+        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.75, .70, " Variância", fontsize = 10)
+        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.75, .60, " Mínimo", fontsize = 10)
+        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.75, .55, " Máximo", fontsize = 10)
+        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
+        plt.figtext(.87, .50, str(er), fontsize = 10)
+        
+    
         plt.xlabel('Numero de análises')  
-        plt.ylabel('Fator')  
+  
+        plt.ylabel('Fator 23')  
         
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Nº de análises x Fator", 
-                fontsize=30, 
+        plt.title(label="Gráfico Nº de análises x Fator 23", 
+                fontsize=20, 
                 color="Black")
 
         plt.show()
@@ -1091,12 +1901,47 @@ class imporSA(Qt.QWidget):
 
                 # Configuração de Visualização
         plt.plot(Id, Fator24, '-', color='Blue')  
+        #Média
+        m = statistics.mean(Fator24) 
+
+        #variância
+        v = statistics.pvariance(Fator24)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator24)
+
+        #Mínimo 
+        mi = statistics.median_low(Fator24)
+
+        #Máximo
+        ma = statistics.median_high(Fator24)
+
+        #Erro Padrão
+        er = np.std(Fator24, ddof=1) / np.sqrt(np.size(Fator24))
+
+
+        plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.75, .75, " Média", fontsize = 10)
+        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.75, .70, " Variância", fontsize = 10)
+        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.75, .60, " Mínimo", fontsize = 10)
+        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.75, .55, " Máximo", fontsize = 10)
+        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
+        plt.figtext(.87, .50, str(er), fontsize = 10)
+        
+    
         plt.xlabel('Numero de análises')  
-        plt.ylabel('Fator')  
+  
+        plt.ylabel('Fator 24')  
         
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Nº de análises x Fator", 
-                fontsize=30, 
+        plt.title(label="Gráfico Nº de análises x Fator 24", 
+                fontsize=20, 
                 color="Black")
         plt.show()
 
@@ -1122,12 +1967,47 @@ class imporSA(Qt.QWidget):
 
                 # Configuração de Visualização
         plt.plot(Id, Fator25, '-', color='Blue')  
+        #Média
+        m = statistics.mean(Fator25) 
+
+        #variância
+        v = statistics.pvariance(Fator25)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator25)
+
+        #Mínimo 
+        mi = statistics.median_low(Fator25)
+
+        #Máximo
+        ma = statistics.median_high(Fator25)
+
+        #Erro Padrão
+        er = np.std(Fator25, ddof=1) / np.sqrt(np.size(Fator25))
+
+
+        plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.75, .75, " Média", fontsize = 10)
+        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.75, .70, " Variância", fontsize = 10)
+        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.75, .60, " Mínimo", fontsize = 10)
+        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.75, .55, " Máximo", fontsize = 10)
+        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
+        plt.figtext(.87, .50, str(er), fontsize = 10)
+        
+    
         plt.xlabel('Numero de análises')  
-        plt.ylabel('Fator')  
+  
+        plt.ylabel('Fator 25')  
         
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Nº de análises x Fator", 
-                fontsize=30, 
+        plt.title(label="Gráfico Nº de análises x Fator 25", 
+                fontsize=20, 
                 color="Black")
 
         plt.show()
@@ -1154,12 +2034,47 @@ class imporSA(Qt.QWidget):
 
                 # Configuração de Visualização
         plt.plot(Id, Fator26, '-', color='Blue')  
+        #Média
+        m = statistics.mean(Fator26) 
+
+        #variância
+        v = statistics.pvariance(Fator26)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator26)
+
+        #Mínimo 
+        mi = statistics.median_low(Fator26)
+
+        #Máximo
+        ma = statistics.median_high(Fator26)
+
+        #Erro Padrão
+        er = np.std(Fator26, ddof=1) / np.sqrt(np.size(Fator26))
+
+
+        plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.75, .75, " Média", fontsize = 10)
+        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.75, .70, " Variância", fontsize = 10)
+        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.75, .60, " Mínimo", fontsize = 10)
+        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.75, .55, " Máximo", fontsize = 10)
+        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
+        plt.figtext(.87, .50, str(er), fontsize = 10)
+        
+    
         plt.xlabel('Numero de análises')  
-        plt.ylabel('Fator')  
+  
+        plt.ylabel('Fator 26')  
         
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Nº de análises x Fator", 
-                fontsize=30, 
+        plt.title(label="Gráfico Nº de análises x Fator 26", 
+                fontsize=20, 
                 color="Black")
         plt.show()
 
@@ -1185,12 +2100,47 @@ class imporSA(Qt.QWidget):
 
                 # Configuração de Visualização
         plt.plot(Id, Fator27, '-', color='Blue')  
+        #Média
+        m = statistics.mean(Fator27) 
+
+        #variância
+        v = statistics.pvariance(Fator27)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator27)
+
+        #Mínimo 
+        mi = statistics.median_low(Fator27)
+
+        #Máximo
+        ma = statistics.median_high(Fator27)
+
+        #Erro Padrão
+        er = np.std(Fator27, ddof=1) / np.sqrt(np.size(Fator27))
+
+
+        plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.75, .75, " Média", fontsize = 10)
+        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.75, .70, " Variância", fontsize = 10)
+        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.75, .60, " Mínimo", fontsize = 10)
+        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.75, .55, " Máximo", fontsize = 10)
+        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
+        plt.figtext(.87, .50, str(er), fontsize = 10)
+        
+    
         plt.xlabel('Numero de análises')  
-        plt.ylabel('Fator')  
+  
+        plt.ylabel('Fator 27')  
         
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Nº de análises x Fator", 
-                fontsize=30, 
+        plt.title(label="Gráfico Nº de análises x Fator 27", 
+                fontsize=20, 
                 color="Black")
 
         plt.show()
@@ -1217,12 +2167,47 @@ class imporSA(Qt.QWidget):
 
                 # Configuração de Visualização
         plt.plot(Id, Fator28, '-', color='Blue')  
+        #Média
+        m = statistics.mean(Fator28) 
+
+        #variância
+        v = statistics.pvariance(Fator28)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator28)
+
+        #Mínimo 
+        mi = statistics.median_low(Fator28)
+
+        #Máximo
+        ma = statistics.median_high(Fator28)
+
+        #Erro Padrão
+        er = np.std(Fator28, ddof=1) / np.sqrt(np.size(Fator28))
+
+
+        plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.75, .75, " Média", fontsize = 10)
+        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.75, .70, " Variância", fontsize = 10)
+        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.75, .60, " Mínimo", fontsize = 10)
+        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.75, .55, " Máximo", fontsize = 10)
+        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
+        plt.figtext(.87, .50, str(er), fontsize = 10)
+        
+    
         plt.xlabel('Numero de análises')  
-        plt.ylabel('Fator')  
+  
+        plt.ylabel('Fator 28')  
         
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Nº de análises x Fator", 
-                fontsize=30, 
+        plt.title(label="Gráfico Nº de análises x Fator 28", 
+                fontsize=20, 
                 color="Black")
 
         plt.show()
@@ -1249,12 +2234,47 @@ class imporSA(Qt.QWidget):
 
                 # Configuração de Visualização
         plt.plot(Id, Fator29, '-', color='Blue')  
+        #Média
+        m = statistics.mean(Fator29) 
+
+        #variância
+        v = statistics.pvariance(Fator29)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator29)
+
+        #Mínimo 
+        mi = statistics.median_low(Fator29)
+
+        #Máximo
+        ma = statistics.median_high(Fator29)
+
+        #Erro Padrão
+        er = np.std(Fator29, ddof=1) / np.sqrt(np.size(Fator29))
+
+
+        plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.75, .75, " Média", fontsize = 10)
+        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.75, .70, " Variância", fontsize = 10)
+        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.75, .60, " Mínimo", fontsize = 10)
+        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.75, .55, " Máximo", fontsize = 10)
+        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
+        plt.figtext(.87, .50, str(er), fontsize = 10)
+        
+    
         plt.xlabel('Numero de análises')  
-        plt.ylabel('Fator')  
+  
+        plt.ylabel('Fator 29')  
         
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Nº de análises x Fator", 
-                fontsize=30, 
+        plt.title(label="Gráfico Nº de análises x Fator 29", 
+                fontsize=20, 
                 color="Black")
 
         plt.show()
@@ -1284,7 +2304,7 @@ class imporSA(Qt.QWidget):
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=30, 
+                    fontsize=20, 
                     color="Black") 
 
         plt.show()
@@ -1311,7 +2331,7 @@ class imporSA(Qt.QWidget):
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=30, 
+                    fontsize=20, 
                     color="Black") 
 
         plt.show()
@@ -1338,7 +2358,7 @@ class imporSA(Qt.QWidget):
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=30, 
+                    fontsize=20, 
                     color="Black") 
 
         plt.show()
@@ -1365,7 +2385,7 @@ class imporSA(Qt.QWidget):
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=30, 
+                    fontsize=20, 
                     color="Black") 
 
         plt.show()
@@ -1392,7 +2412,7 @@ class imporSA(Qt.QWidget):
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=30, 
+                    fontsize=20, 
                     color="Black") 
 
         plt.show()
@@ -1419,7 +2439,7 @@ class imporSA(Qt.QWidget):
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=30, 
+                    fontsize=20, 
                     color="Black") 
 
         plt.show()
@@ -1446,7 +2466,7 @@ class imporSA(Qt.QWidget):
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=30, 
+                    fontsize=20, 
                     color="Black") 
 
         plt.show()
@@ -1473,7 +2493,7 @@ class imporSA(Qt.QWidget):
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=30, 
+                    fontsize=20, 
                     color="Black") 
 
         plt.show()
@@ -1498,7 +2518,7 @@ class imporSA(Qt.QWidget):
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=30, 
+                    fontsize=20, 
                     color="Black") 
 
         plt.show()
@@ -1525,7 +2545,7 @@ class imporSA(Qt.QWidget):
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=30, 
+                    fontsize=20, 
                     color="Black") 
 
         plt.show()
@@ -1552,7 +2572,7 @@ class imporSA(Qt.QWidget):
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=30, 
+                    fontsize=20, 
                     color="Black") 
 
         plt.show()
@@ -1578,8 +2598,8 @@ class imporSA(Qt.QWidget):
         plt.ylabel('Fator')  
                 
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Normalizado", 
-                    fontsize=30, 
+        plt.title(label="Histograma", 
+                    fontsize=20, 
                     color="Black") 
 
         plt.show()
@@ -1605,8 +2625,8 @@ class imporSA(Qt.QWidget):
         plt.ylabel('Fator')  
                 
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Normalizado", 
-                    fontsize=30, 
+        plt.title(label="Histograma", 
+                    fontsize=20, 
                     color="Black") 
 
         plt.show()
@@ -1634,8 +2654,8 @@ class imporSA(Qt.QWidget):
         plt.ylabel('Fator')  
                 
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Normalizado", 
-                    fontsize=30, 
+        plt.title(label="Histograma", 
+                    fontsize=20, 
                     color="Black") 
 
         plt.show()
@@ -1661,8 +2681,8 @@ class imporSA(Qt.QWidget):
         plt.ylabel('Fator')  
                 
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Normalizado", 
-                    fontsize=30, 
+        plt.title(label="Histograma", 
+                    fontsize=20, 
                     color="Black") 
 
         plt.show()
@@ -1690,8 +2710,8 @@ class imporSA(Qt.QWidget):
         plt.ylabel('Fator')  
                 
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Normalizado", 
-                    fontsize=30, 
+        plt.title(label="Histograma", 
+                    fontsize=20, 
                     color="Black") 
 
         plt.show()
@@ -1717,8 +2737,8 @@ class imporSA(Qt.QWidget):
         plt.ylabel('Fator')  
                 
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Normalizado", 
-                    fontsize=30, 
+        plt.title(label="Histograma", 
+                    fontsize=20, 
                     color="Black") 
 
         plt.show()
@@ -1746,8 +2766,8 @@ class imporSA(Qt.QWidget):
         plt.ylabel('Fator')  
                 
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Normalizado", 
-                    fontsize=30, 
+        plt.title(label="Histograma", 
+                    fontsize=20, 
                     color="Black") 
 
         plt.show()
@@ -1773,8 +2793,8 @@ class imporSA(Qt.QWidget):
         plt.ylabel('Fator')  
                 
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Normalizado", 
-                    fontsize=30, 
+        plt.title(label="Histograma", 
+                    fontsize=20, 
                     color="Black") 
 
         plt.show()
@@ -1802,8 +2822,8 @@ class imporSA(Qt.QWidget):
         plt.ylabel('Fator')  
                 
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Normalizado", 
-                    fontsize=30, 
+        plt.title(label="Histograma", 
+                    fontsize=20, 
                     color="Black") 
 
         plt.show()
@@ -1829,8 +2849,8 @@ class imporSA(Qt.QWidget):
         plt.ylabel('Fator')  
                 
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Normalizado", 
-                    fontsize=30, 
+        plt.title(label="Histograma", 
+                    fontsize=20, 
                     color="Black") 
 
         plt.show()
@@ -1858,8 +2878,8 @@ class imporSA(Qt.QWidget):
         plt.ylabel('Fator')  
                 
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Normalizado", 
-                    fontsize=30, 
+        plt.title(label="Histograma", 
+                    fontsize=20, 
                     color="Black") 
 
         plt.show()
@@ -1885,8 +2905,8 @@ class imporSA(Qt.QWidget):
         plt.ylabel('Fator')  
                 
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Normalizado", 
-                    fontsize=30, 
+        plt.title(label="Histograma", 
+                    fontsize=20, 
                     color="Black") 
 
         plt.show()
@@ -1914,8 +2934,8 @@ class imporSA(Qt.QWidget):
         plt.ylabel('Fator')  
                 
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Normalizado", 
-                    fontsize=30, 
+        plt.title(label="Histograma", 
+                    fontsize=20, 
                     color="Black") 
 
         plt.show()
@@ -1941,8 +2961,8 @@ class imporSA(Qt.QWidget):
         plt.ylabel('Fator')  
                 
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Normalizado", 
-                    fontsize=30, 
+        plt.title(label="Histograma", 
+                    fontsize=20, 
                     color="Black") 
 
         plt.show()
@@ -1970,8 +2990,8 @@ class imporSA(Qt.QWidget):
         plt.ylabel('Fator')  
                 
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Normalizado", 
-                    fontsize=30, 
+        plt.title(label="Histograma", 
+                    fontsize=20, 
                     color="Black") 
 
         plt.show()
@@ -1997,8 +3017,8 @@ class imporSA(Qt.QWidget):
         plt.ylabel('Fator')  
                 
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Normalizado", 
-                    fontsize=30, 
+        plt.title(label="Histograma", 
+                    fontsize=20, 
                     color="Black") 
 
         plt.show()
@@ -2024,8 +3044,8 @@ class imporSA(Qt.QWidget):
         plt.ylabel('Fator')  
                 
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Normalizado", 
-                    fontsize=30, 
+        plt.title(label="Histograma", 
+                    fontsize=20, 
                     color="Black") 
 
         plt.show()
@@ -2051,8 +3071,8 @@ class imporSA(Qt.QWidget):
         plt.ylabel('Fator')  
                 
         # Configuração do título e cor do gráfico
-        plt.title(label="Gráfico Normalizado", 
-                    fontsize=30, 
+        plt.title(label="Histograma", 
+                    fontsize=20, 
                     color="Black") 
 
         plt.show()
@@ -2089,9 +3109,7 @@ class Widget(Qt.QWidget):
         
         self.tableWidget = QTableWidget()
         self.tableWidget.setRowCount(5)
-        self.tableWidget.setColumnCount(16)
-
-        self.tableWidget.setHorizontalHeaderLabels(('Número da Análise', 'Análise SA', 'Fornecedor', 'Fator1', 'Fator2', 'Fator3', 'Fator4', 'Fator5', 'Fator6', 'Fator7', 'Fator8', 'Fator9', 'Fator10', 'Fator11', 'Fator12', 'Parâmetro de Qualidade 1'))
+        self.tableWidget.setColumnCount(15)
 
         layout.addWidget(self.tableWidget)
 
@@ -2103,6 +3121,9 @@ class Widget(Qt.QWidget):
         connection = sqlite3.connect('coletabeta.db')
         query = "SELECT * FROM Sa1"
         result = connection.execute(query)
+
+        self.tableWidget.setHorizontalHeaderLabels(('Número da Análise', 'Análise SA', 'Fornecedor', 'Fator1', 'Fator2', 'Fator3', 'Fator4', 'Fator5', 'Fator6', 'Fator7', 'Fator8', 'Fator9', 'Fator10', 'Fator11', 'Parâmetro de Qualidade 1'))
+
         self.tableWidget.setRowCount(0)
         for row_number, row_data in enumerate(result):
             self.tableWidget.insertRow(row_number)
@@ -2115,6 +3136,12 @@ class Widget(Qt.QWidget):
         connection = sqlite3.connect('coletabeta.db')
         query = "SELECT * FROM Sa2"
         result = connection.execute(query)
+
+        self.tableWidget.setRowCount(5)
+        self.tableWidget.setColumnCount(16)
+
+        self.tableWidget.setHorizontalHeaderLabels(('Número da Análise', 'Análise SA1', 'Fator12', 'Fator13', 'Fator14', 'Fator15', 'Fator16', 'Fator17', 'Fator18', 'Fator19', 'Fator20', 'Fator21', 'Fator22', 'Parâmetro de Qualidade 2', 'Parâmetro de Qualidade3', 'Data da análise'))
+
         self.tableWidget.setRowCount(0)
         for row_number, row_data in enumerate(result):
             self.tableWidget.insertRow(row_number)
@@ -2127,6 +3154,12 @@ class Widget(Qt.QWidget):
         connection = sqlite3.connect('coletabeta.db')
         query = "SELECT * FROM Sa3"
         result = connection.execute(query)
+
+        self.tableWidget.setRowCount(5)
+        self.tableWidget.setColumnCount(13)
+
+        self.tableWidget.setHorizontalHeaderLabels(('Número da Análise', 'Análise SA2', 'Fator23', 'Fator24', 'Fator25', 'Fator26', 'Fator27', 'Fator28', 'Fator29', 'Parâmetro de Qualidade 4', 'Parâmetro de Qualidade 5', 'Parâmetro de Qualidade 6', 'Data da análise'))
+
         self.tableWidget.setRowCount(0)
         for row_number, row_data in enumerate(result):
             self.tableWidget.insertRow(row_number)
