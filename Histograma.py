@@ -15,13 +15,14 @@ import scipy.stats as st
 from scipy.stats import norm
 import pandas as pd  
 import statistics
+style.use('fivethirtyeight')
         
 # Conexão ao Banco de Dados Local
 conn = sqlite3.connect('coletabeta.db')
 c = conn.cursor()
 
 result = c.execute('SELECT Fator2 FROM Sa1')
-data = np.array(c.fetchall())
+data = c.fetchall()
 
 ## dados do banco
 Fator2 = [data]
@@ -31,7 +32,7 @@ for row in result:
 # Configuração de Visualização
 sns.histplot(data,color='black')
 
-#print(Fator2)
+print(Fator2)
 
 #Média
 m = statistics.mean(Fator2) 

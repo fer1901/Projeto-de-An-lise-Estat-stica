@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import pandas as pd
 import seaborn as sb
 from matplotlib import pyplot as plt
@@ -20,7 +18,7 @@ from scipy.stats import norm
 import pandas as pd  
 import statistics
 
-# example data
+
 # Conexão ao Banco de Dados Local
 conn = sqlite3.connect('coletabeta.db')
 c = conn.cursor()
@@ -33,18 +31,8 @@ Fator2 = [data]
 for row in result:
     Fator2.append(float(row[1]))
 
+df = sb.load_dataset(Fator2)
 
-num_bins = 20
-# the histogram of the data
-n, bins, patches = plt.hist(data, num_bins, density=1, facecolor='blue', alpha=0.5)
 
-# add a 'best fit' line
-#y = mlab.normpdf(bins)
-plt.plot(bins, 'r--')
-plt.xlabel('Smarts')
-plt.ylabel('Probability')
-plt.title(r'Histogram of IQ: $\mu=100$, $\sigma=15$')
-
-# Tweak spacing to prevent clipping of ylabel
-plt.subplots_adjust(left=0.15)
+sb.distplot(df['petal_length'],kde = False)
 plt.show()

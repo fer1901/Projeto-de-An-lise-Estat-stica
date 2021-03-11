@@ -24,9 +24,6 @@ def graph_data():
     Id = []
     Fator2 = []
 
-    df = pd.read_sql_query("SELECT Id, Fator2 FROM Sa1", conn)
-    df = pd.Series
-
     for row in data:
         Id.append(row[0])
         Fator2.append(row[1])
