@@ -45,6 +45,7 @@ class imporSA(Qt.QWidget):
     def __init__(self):
         super().__init__()
         self.title = 'Análise estatística de fatores'
+        self.setWindowIcon(QtGui.QIcon('logo.png'))
         self.left = 0
         self.top = 0
         self.width = 200
@@ -385,17 +386,17 @@ class imporSA(Qt.QWidget):
 
         plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
         plt.figtext(.75, .75, " Média", fontsize = 10)
-        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.87, .75, str("%.3f" % (m)), fontsize = 10)
         plt.figtext(.75, .70, " Variância", fontsize = 10)
-        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.87, .70, str("%.3f" % (v)), fontsize = 10)
         plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
-        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.87, .65, str("%.3f" % (d)), fontsize = 10)
         plt.figtext(.75, .60, " Mínimo", fontsize = 10)
-        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.87, .60, str("%.3f" % (mi)), fontsize = 10)
         plt.figtext(.75, .55, " Máximo", fontsize = 10)
-        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.87, .55, str("%.3f" % (ma)), fontsize = 10)
         plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
-        plt.figtext(.87, .50, str(er), fontsize = 10)
+        plt.figtext(.87, .50, str("%.3f" % (er)), fontsize = 10)
         
     
         plt.xlabel('Numero de análises')  
@@ -452,17 +453,17 @@ class imporSA(Qt.QWidget):
 
         plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
         plt.figtext(.75, .75, " Média", fontsize = 10)
-        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.87, .75, str("%.3f" % (m)), fontsize = 10)
         plt.figtext(.75, .70, " Variância", fontsize = 10)
-        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.87, .70, str("%.3f" % (v)), fontsize = 10)
         plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
-        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.87, .65, str("%.3f" % (d)), fontsize = 10)
         plt.figtext(.75, .60, " Mínimo", fontsize = 10)
-        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.87, .60, str("%.3f" % (mi)), fontsize = 10)
         plt.figtext(.75, .55, " Máximo", fontsize = 10)
-        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.87, .55, str("%.3f" % (ma)), fontsize = 10)
         plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
-        plt.figtext(.87, .50, str(er), fontsize = 10)
+        plt.figtext(.87, .50, str("%.3f" % (er)), fontsize = 10)
         
     
         plt.xlabel('Numero de análises')  
@@ -518,17 +519,17 @@ class imporSA(Qt.QWidget):
 
         plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
         plt.figtext(.75, .75, " Média", fontsize = 10)
-        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.87, .75, str("%.3f" % (m)), fontsize = 10)
         plt.figtext(.75, .70, " Variância", fontsize = 10)
-        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.87, .70, str("%.3f" % (v)), fontsize = 10)
         plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
-        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.87, .65, str("%.3f" % (d)), fontsize = 10)
         plt.figtext(.75, .60, " Mínimo", fontsize = 10)
-        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.87, .60, str("%.3f" % (mi)), fontsize = 10)
         plt.figtext(.75, .55, " Máximo", fontsize = 10)
-        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.87, .55, str("%.3f" % (ma)), fontsize = 10)
         plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
-        plt.figtext(.87, .50, str(er), fontsize = 10)
+        plt.figtext(.87, .50, str("%.3f" % (er)), fontsize = 10)
         
     
         plt.xlabel('Numero de análises')  
@@ -585,17 +586,17 @@ class imporSA(Qt.QWidget):
 
         plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
         plt.figtext(.75, .75, " Média", fontsize = 10)
-        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.87, .75, str("%.3f" % (m)), fontsize = 10)
         plt.figtext(.75, .70, " Variância", fontsize = 10)
-        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.87, .70, str("%.3f" % (v)), fontsize = 10)
         plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
-        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.87, .65, str("%.3f" % (d)), fontsize = 10)
         plt.figtext(.75, .60, " Mínimo", fontsize = 10)
-        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.87, .60, str("%.3f" % (mi)), fontsize = 10)
         plt.figtext(.75, .55, " Máximo", fontsize = 10)
-        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.87, .55, str("%.3f" % (ma)), fontsize = 10)
         plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
-        plt.figtext(.87, .50, str(er), fontsize = 10)
+        plt.figtext(.87, .50, str("%.3f" % (er)), fontsize = 10)
         
     
         plt.xlabel('Numero de análises')  
@@ -652,17 +653,17 @@ class imporSA(Qt.QWidget):
 
         plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
         plt.figtext(.75, .75, " Média", fontsize = 10)
-        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.87, .75, str("%.3f" % (m)), fontsize = 10)
         plt.figtext(.75, .70, " Variância", fontsize = 10)
-        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.87, .70, str("%.3f" % (v)), fontsize = 10)
         plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
-        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.87, .65, str("%.3f" % (d)), fontsize = 10)
         plt.figtext(.75, .60, " Mínimo", fontsize = 10)
-        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.87, .60, str("%.3f" % (mi)), fontsize = 10)
         plt.figtext(.75, .55, " Máximo", fontsize = 10)
-        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.87, .55, str("%.3f" % (ma)), fontsize = 10)
         plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
-        plt.figtext(.87, .50, str(er), fontsize = 10)
+        plt.figtext(.87, .50, str("%.3f" % (er)), fontsize = 10)
         
     
         plt.xlabel('Numero de análises')  
@@ -719,17 +720,17 @@ class imporSA(Qt.QWidget):
 
         plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
         plt.figtext(.75, .75, " Média", fontsize = 10)
-        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.87, .75, str("%.3f" % (m)), fontsize = 10)
         plt.figtext(.75, .70, " Variância", fontsize = 10)
-        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.87, .70, str("%.3f" % (v)), fontsize = 10)
         plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
-        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.87, .65, str("%.3f" % (d)), fontsize = 10)
         plt.figtext(.75, .60, " Mínimo", fontsize = 10)
-        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.87, .60, str("%.3f" % (mi)), fontsize = 10)
         plt.figtext(.75, .55, " Máximo", fontsize = 10)
-        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.87, .55, str("%.3f" % (ma)), fontsize = 10)
         plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
-        plt.figtext(.87, .50, str(er), fontsize = 10)
+        plt.figtext(.87, .50, str("%.3f" % (er)), fontsize = 10)
         
     
         plt.xlabel('Numero de análises')  
@@ -786,17 +787,17 @@ class imporSA(Qt.QWidget):
 
         plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
         plt.figtext(.75, .75, " Média", fontsize = 10)
-        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.87, .75, str("%.3f" % (m)), fontsize = 10)
         plt.figtext(.75, .70, " Variância", fontsize = 10)
-        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.87, .70, str("%.3f" % (v)), fontsize = 10)
         plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
-        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.87, .65, str("%.3f" % (d)), fontsize = 10)
         plt.figtext(.75, .60, " Mínimo", fontsize = 10)
-        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.87, .60, str("%.3f" % (mi)), fontsize = 10)
         plt.figtext(.75, .55, " Máximo", fontsize = 10)
-        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.87, .55, str("%.3f" % (ma)), fontsize = 10)
         plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
-        plt.figtext(.87, .50, str(er), fontsize = 10)
+        plt.figtext(.87, .50, str("%.3f" % (er)), fontsize = 10)
         
     
         plt.xlabel('Numero de análises')  
@@ -852,17 +853,17 @@ class imporSA(Qt.QWidget):
 
         plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
         plt.figtext(.75, .75, " Média", fontsize = 10)
-        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.87, .75, str("%.3f" % (m)), fontsize = 10)
         plt.figtext(.75, .70, " Variância", fontsize = 10)
-        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.87, .70, str("%.3f" % (v)), fontsize = 10)
         plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
-        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.87, .65, str("%.3f" % (d)), fontsize = 10)
         plt.figtext(.75, .60, " Mínimo", fontsize = 10)
-        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.87, .60, str("%.3f" % (mi)), fontsize = 10)
         plt.figtext(.75, .55, " Máximo", fontsize = 10)
-        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.87, .55, str("%.3f" % (ma)), fontsize = 10)
         plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
-        plt.figtext(.87, .50, str(er), fontsize = 10)
+        plt.figtext(.87, .50, str("%.3f" % (er)), fontsize = 10)
         
     
         plt.xlabel('Numero de análises')  
@@ -918,17 +919,17 @@ class imporSA(Qt.QWidget):
 
         plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
         plt.figtext(.75, .75, " Média", fontsize = 10)
-        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.87, .75, str("%.3f" % (m)), fontsize = 10)
         plt.figtext(.75, .70, " Variância", fontsize = 10)
-        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.87, .70, str("%.3f" % (v)), fontsize = 10)
         plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
-        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.87, .65, str("%.3f" % (d)), fontsize = 10)
         plt.figtext(.75, .60, " Mínimo", fontsize = 10)
-        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.87, .60, str("%.3f" % (mi)), fontsize = 10)
         plt.figtext(.75, .55, " Máximo", fontsize = 10)
-        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.87, .55, str("%.3f" % (ma)), fontsize = 10)
         plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
-        plt.figtext(.87, .50, str(er), fontsize = 10)
+        plt.figtext(.87, .50, str("%.3f" % (er)), fontsize = 10)
         
     
         plt.xlabel('Numero de análises')  
@@ -985,17 +986,17 @@ class imporSA(Qt.QWidget):
 
         plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
         plt.figtext(.75, .75, " Média", fontsize = 10)
-        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.87, .75, str("%.3f" % (m)), fontsize = 10)
         plt.figtext(.75, .70, " Variância", fontsize = 10)
-        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.87, .70, str("%.3f" % (v)), fontsize = 10)
         plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
-        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.87, .65, str("%.3f" % (d)), fontsize = 10)
         plt.figtext(.75, .60, " Mínimo", fontsize = 10)
-        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.87, .60, str("%.3f" % (mi)), fontsize = 10)
         plt.figtext(.75, .55, " Máximo", fontsize = 10)
-        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.87, .55, str("%.3f" % (ma)), fontsize = 10)
         plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
-        plt.figtext(.87, .50, str(er), fontsize = 10)
+        plt.figtext(.87, .50, str("%.3f" % (er)), fontsize = 10)
         
     
         plt.xlabel('Numero de análises')  
@@ -1052,17 +1053,17 @@ class imporSA(Qt.QWidget):
 
         plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
         plt.figtext(.75, .75, " Média", fontsize = 10)
-        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.87, .75, str("%.3f" % (m)), fontsize = 10)
         plt.figtext(.75, .70, " Variância", fontsize = 10)
-        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.87, .70, str("%.3f" % (v)), fontsize = 10)
         plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
-        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.87, .65, str("%.3f" % (d)), fontsize = 10)
         plt.figtext(.75, .60, " Mínimo", fontsize = 10)
-        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.87, .60, str("%.3f" % (mi)), fontsize = 10)
         plt.figtext(.75, .55, " Máximo", fontsize = 10)
-        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.87, .55, str("%.3f" % (ma)), fontsize = 10)
         plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
-        plt.figtext(.87, .50, str(er), fontsize = 10)
+        plt.figtext(.87, .50, str("%.3f" % (er)), fontsize = 10)
         
     
         plt.xlabel('Numero de análises')  
@@ -1119,17 +1120,17 @@ class imporSA(Qt.QWidget):
 
         plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
         plt.figtext(.75, .75, " Média", fontsize = 10)
-        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.87, .75, str("%.3f" % (m)), fontsize = 10)
         plt.figtext(.75, .70, " Variância", fontsize = 10)
-        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.87, .70, str("%.3f" % (v)), fontsize = 10)
         plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
-        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.87, .65, str("%.3f" % (d)), fontsize = 10)
         plt.figtext(.75, .60, " Mínimo", fontsize = 10)
-        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.87, .60, str("%.3f" % (mi)), fontsize = 10)
         plt.figtext(.75, .55, " Máximo", fontsize = 10)
-        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.87, .55, str("%.3f" % (ma)), fontsize = 10)
         plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
-        plt.figtext(.87, .50, str(er), fontsize = 10)
+        plt.figtext(.87, .50, str("%.3f" % (er)), fontsize = 10)
         
     
         plt.xlabel('Numero de análises')  
@@ -1186,17 +1187,17 @@ class imporSA(Qt.QWidget):
 
         plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
         plt.figtext(.75, .75, " Média", fontsize = 10)
-        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.87, .75, str("%.3f" % (m)), fontsize = 10)
         plt.figtext(.75, .70, " Variância", fontsize = 10)
-        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.87, .70, str("%.3f" % (v)), fontsize = 10)
         plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
-        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.87, .65, str("%.3f" % (d)), fontsize = 10)
         plt.figtext(.75, .60, " Mínimo", fontsize = 10)
-        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.87, .60, str("%.3f" % (mi)), fontsize = 10)
         plt.figtext(.75, .55, " Máximo", fontsize = 10)
-        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.87, .55, str("%.3f" % (ma)), fontsize = 10)
         plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
-        plt.figtext(.87, .50, str(er), fontsize = 10)
+        plt.figtext(.87, .50, str("%.3f" % (er)), fontsize = 10)
         
     
         plt.xlabel('Numero de análises')  
@@ -1253,17 +1254,17 @@ class imporSA(Qt.QWidget):
 
         plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
         plt.figtext(.75, .75, " Média", fontsize = 10)
-        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.87, .75, str("%.3f" % (m)), fontsize = 10)
         plt.figtext(.75, .70, " Variância", fontsize = 10)
-        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.87, .70, str("%.3f" % (v)), fontsize = 10)
         plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
-        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.87, .65, str("%.3f" % (d)), fontsize = 10)
         plt.figtext(.75, .60, " Mínimo", fontsize = 10)
-        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.87, .60, str("%.3f" % (mi)), fontsize = 10)
         plt.figtext(.75, .55, " Máximo", fontsize = 10)
-        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.87, .55, str("%.3f" % (ma)), fontsize = 10)
         plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
-        plt.figtext(.87, .50, str(er), fontsize = 10)
+        plt.figtext(.87, .50, str("%.3f" % (er)), fontsize = 10)
         
     
         plt.xlabel('Numero de análises')  
@@ -1320,17 +1321,17 @@ class imporSA(Qt.QWidget):
 
         plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
         plt.figtext(.75, .75, " Média", fontsize = 10)
-        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.87, .75, str("%.3f" % (m)), fontsize = 10)
         plt.figtext(.75, .70, " Variância", fontsize = 10)
-        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.87, .70, str("%.3f" % (v)), fontsize = 10)
         plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
-        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.87, .65, str("%.3f" % (d)), fontsize = 10)
         plt.figtext(.75, .60, " Mínimo", fontsize = 10)
-        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.87, .60, str("%.3f" % (mi)), fontsize = 10)
         plt.figtext(.75, .55, " Máximo", fontsize = 10)
-        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.87, .55, str("%.3f" % (ma)), fontsize = 10)
         plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
-        plt.figtext(.87, .50, str(er), fontsize = 10)
+        plt.figtext(.87, .50, str("%.3f" % (er)), fontsize = 10)
         
     
         plt.xlabel('Numero de análises')  
@@ -1387,17 +1388,17 @@ class imporSA(Qt.QWidget):
 
         plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
         plt.figtext(.75, .75, " Média", fontsize = 10)
-        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.87, .75, str("%.3f" % (m)), fontsize = 10)
         plt.figtext(.75, .70, " Variância", fontsize = 10)
-        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.87, .70, str("%.3f" % (v)), fontsize = 10)
         plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
-        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.87, .65, str("%.3f" % (d)), fontsize = 10)
         plt.figtext(.75, .60, " Mínimo", fontsize = 10)
-        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.87, .60, str("%.3f" % (mi)), fontsize = 10)
         plt.figtext(.75, .55, " Máximo", fontsize = 10)
-        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.87, .55, str("%.3f" % (ma)), fontsize = 10)
         plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
-        plt.figtext(.87, .50, str(er), fontsize = 10)
+        plt.figtext(.87, .50, str("%.3f" % (er)), fontsize = 10)
         
     
         plt.xlabel('Numero de análises')  
@@ -1454,17 +1455,17 @@ class imporSA(Qt.QWidget):
 
         plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
         plt.figtext(.75, .75, " Média", fontsize = 10)
-        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.87, .75, str("%.3f" % (m)), fontsize = 10)
         plt.figtext(.75, .70, " Variância", fontsize = 10)
-        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.87, .70, str("%.3f" % (v)), fontsize = 10)
         plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
-        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.87, .65, str("%.3f" % (d)), fontsize = 10)
         plt.figtext(.75, .60, " Mínimo", fontsize = 10)
-        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.87, .60, str("%.3f" % (mi)), fontsize = 10)
         plt.figtext(.75, .55, " Máximo", fontsize = 10)
-        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.87, .55, str("%.3f" % (ma)), fontsize = 10)
         plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
-        plt.figtext(.87, .50, str(er), fontsize = 10)
+        plt.figtext(.87, .50, str("%.3f" % (er)), fontsize = 10)
         
     
         plt.xlabel('Numero de análises')  
@@ -1521,17 +1522,17 @@ class imporSA(Qt.QWidget):
 
         plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
         plt.figtext(.75, .75, " Média", fontsize = 10)
-        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.87, .75, str("%.3f" % (m)), fontsize = 10)
         plt.figtext(.75, .70, " Variância", fontsize = 10)
-        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.87, .70, str("%.3f" % (v)), fontsize = 10)
         plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
-        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.87, .65, str("%.3f" % (d)), fontsize = 10)
         plt.figtext(.75, .60, " Mínimo", fontsize = 10)
-        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.87, .60, str("%.3f" % (mi)), fontsize = 10)
         plt.figtext(.75, .55, " Máximo", fontsize = 10)
-        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.87, .55, str("%.3f" % (ma)), fontsize = 10)
         plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
-        plt.figtext(.87, .50, str(er), fontsize = 10)
+        plt.figtext(.87, .50, str("%.3f" % (er)), fontsize = 10)
         
     
         plt.xlabel('Numero de análises')  
@@ -1588,17 +1589,17 @@ class imporSA(Qt.QWidget):
 
         plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
         plt.figtext(.75, .75, " Média", fontsize = 10)
-        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.87, .75, str("%.3f" % (m)), fontsize = 10)
         plt.figtext(.75, .70, " Variância", fontsize = 10)
-        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.87, .70, str("%.3f" % (v)), fontsize = 10)
         plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
-        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.87, .65, str("%.3f" % (d)), fontsize = 10)
         plt.figtext(.75, .60, " Mínimo", fontsize = 10)
-        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.87, .60, str("%.3f" % (mi)), fontsize = 10)
         plt.figtext(.75, .55, " Máximo", fontsize = 10)
-        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.87, .55, str("%.3f" % (ma)), fontsize = 10)
         plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
-        plt.figtext(.87, .50, str(er), fontsize = 10)
+        plt.figtext(.87, .50, str("%.3f" % (er)), fontsize = 10)
         
     
         plt.xlabel('Numero de análises')  
@@ -1655,17 +1656,17 @@ class imporSA(Qt.QWidget):
 
         plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
         plt.figtext(.75, .75, " Média", fontsize = 10)
-        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.87, .75, str("%.3f" % (m)), fontsize = 10)
         plt.figtext(.75, .70, " Variância", fontsize = 10)
-        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.87, .70, str("%.3f" % (v)), fontsize = 10)
         plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
-        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.87, .65, str("%.3f" % (d)), fontsize = 10)
         plt.figtext(.75, .60, " Mínimo", fontsize = 10)
-        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.87, .60, str("%.3f" % (mi)), fontsize = 10)
         plt.figtext(.75, .55, " Máximo", fontsize = 10)
-        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.87, .55, str("%.3f" % (ma)), fontsize = 10)
         plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
-        plt.figtext(.87, .50, str(er), fontsize = 10)
+        plt.figtext(.87, .50, str("%.3f" % (er)), fontsize = 10)
         
     
         plt.xlabel('Numero de análises')  
@@ -1722,17 +1723,17 @@ class imporSA(Qt.QWidget):
 
         plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
         plt.figtext(.75, .75, " Média", fontsize = 10)
-        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.87, .75, str("%.3f" % (m)), fontsize = 10)
         plt.figtext(.75, .70, " Variância", fontsize = 10)
-        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.87, .70, str("%.3f" % (v)), fontsize = 10)
         plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
-        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.87, .65, str("%.3f" % (d)), fontsize = 10)
         plt.figtext(.75, .60, " Mínimo", fontsize = 10)
-        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.87, .60, str("%.3f" % (mi)), fontsize = 10)
         plt.figtext(.75, .55, " Máximo", fontsize = 10)
-        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.87, .55, str("%.3f" % (ma)), fontsize = 10)
         plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
-        plt.figtext(.87, .50, str(er), fontsize = 10)
+        plt.figtext(.87, .50, str("%.3f" % (er)), fontsize = 10)
         
     
         plt.xlabel('Numero de análises')  
@@ -1789,17 +1790,17 @@ class imporSA(Qt.QWidget):
 
         plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
         plt.figtext(.75, .75, " Média", fontsize = 10)
-        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.87, .75, str("%.3f" % (m)), fontsize = 10)
         plt.figtext(.75, .70, " Variância", fontsize = 10)
-        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.87, .70, str("%.3f" % (v)), fontsize = 10)
         plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
-        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.87, .65, str("%.3f" % (d)), fontsize = 10)
         plt.figtext(.75, .60, " Mínimo", fontsize = 10)
-        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.87, .60, str("%.3f" % (mi)), fontsize = 10)
         plt.figtext(.75, .55, " Máximo", fontsize = 10)
-        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.87, .55, str("%.3f" % (ma)), fontsize = 10)
         plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
-        plt.figtext(.87, .50, str(er), fontsize = 10)
+        plt.figtext(.87, .50, str("%.3f" % (er)), fontsize = 10)
         
     
         plt.xlabel('Numero de análises')  
@@ -1855,17 +1856,17 @@ class imporSA(Qt.QWidget):
 
         plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
         plt.figtext(.75, .75, " Média", fontsize = 10)
-        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.87, .75, str("%.3f" % (m)), fontsize = 10)
         plt.figtext(.75, .70, " Variância", fontsize = 10)
-        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.87, .70, str("%.3f" % (v)), fontsize = 10)
         plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
-        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.87, .65, str("%.3f" % (d)), fontsize = 10)
         plt.figtext(.75, .60, " Mínimo", fontsize = 10)
-        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.87, .60, str("%.3f" % (mi)), fontsize = 10)
         plt.figtext(.75, .55, " Máximo", fontsize = 10)
-        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.87, .55, str("%.3f" % (ma)), fontsize = 10)
         plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
-        plt.figtext(.87, .50, str(er), fontsize = 10)
+        plt.figtext(.87, .50, str("%.3f" % (er)), fontsize = 10)
         
     
         plt.xlabel('Numero de análises')  
@@ -1922,17 +1923,17 @@ class imporSA(Qt.QWidget):
 
         plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
         plt.figtext(.75, .75, " Média", fontsize = 10)
-        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.87, .75, str("%.3f" % (m)), fontsize = 10)
         plt.figtext(.75, .70, " Variância", fontsize = 10)
-        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.87, .70, str("%.3f" % (v)), fontsize = 10)
         plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
-        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.87, .65, str("%.3f" % (d)), fontsize = 10)
         plt.figtext(.75, .60, " Mínimo", fontsize = 10)
-        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.87, .60, str("%.3f" % (mi)), fontsize = 10)
         plt.figtext(.75, .55, " Máximo", fontsize = 10)
-        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.87, .55, str("%.3f" % (ma)), fontsize = 10)
         plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
-        plt.figtext(.87, .50, str(er), fontsize = 10)
+        plt.figtext(.87, .50, str("%.3f" % (er)), fontsize = 10)
         
     
         plt.xlabel('Numero de análises')  
@@ -1988,17 +1989,17 @@ class imporSA(Qt.QWidget):
 
         plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
         plt.figtext(.75, .75, " Média", fontsize = 10)
-        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.87, .75, str("%.3f" % (m)), fontsize = 10)
         plt.figtext(.75, .70, " Variância", fontsize = 10)
-        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.87, .70, str("%.3f" % (v)), fontsize = 10)
         plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
-        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.87, .65, str("%.3f" % (d)), fontsize = 10)
         plt.figtext(.75, .60, " Mínimo", fontsize = 10)
-        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.87, .60, str("%.3f" % (mi)), fontsize = 10)
         plt.figtext(.75, .55, " Máximo", fontsize = 10)
-        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.87, .55, str("%.3f" % (ma)), fontsize = 10)
         plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
-        plt.figtext(.87, .50, str(er), fontsize = 10)
+        plt.figtext(.87, .50, str("%.3f" % (er)), fontsize = 10)
         
     
         plt.xlabel('Numero de análises')  
@@ -2055,17 +2056,17 @@ class imporSA(Qt.QWidget):
 
         plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
         plt.figtext(.75, .75, " Média", fontsize = 10)
-        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.87, .75, str("%.3f" % (m)), fontsize = 10)
         plt.figtext(.75, .70, " Variância", fontsize = 10)
-        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.87, .70, str("%.3f" % (v)), fontsize = 10)
         plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
-        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.87, .65, str("%.3f" % (d)), fontsize = 10)
         plt.figtext(.75, .60, " Mínimo", fontsize = 10)
-        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.87, .60, str("%.3f" % (mi)), fontsize = 10)
         plt.figtext(.75, .55, " Máximo", fontsize = 10)
-        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.87, .55, str("%.3f" % (ma)), fontsize = 10)
         plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
-        plt.figtext(.87, .50, str(er), fontsize = 10)
+        plt.figtext(.87, .50, str("%.3f" % (er)), fontsize = 10)
         
     
         plt.xlabel('Numero de análises')  
@@ -2121,17 +2122,17 @@ class imporSA(Qt.QWidget):
 
         plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
         plt.figtext(.75, .75, " Média", fontsize = 10)
-        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.87, .75, str("%.3f" % (m)), fontsize = 10)
         plt.figtext(.75, .70, " Variância", fontsize = 10)
-        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.87, .70, str("%.3f" % (v)), fontsize = 10)
         plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
-        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.87, .65, str("%.3f" % (d)), fontsize = 10)
         plt.figtext(.75, .60, " Mínimo", fontsize = 10)
-        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.87, .60, str("%.3f" % (mi)), fontsize = 10)
         plt.figtext(.75, .55, " Máximo", fontsize = 10)
-        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.87, .55, str("%.3f" % (ma)), fontsize = 10)
         plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
-        plt.figtext(.87, .50, str(er), fontsize = 10)
+        plt.figtext(.87, .50, str("%.3f" % (er)), fontsize = 10)
         
     
         plt.xlabel('Numero de análises')  
@@ -2188,17 +2189,17 @@ class imporSA(Qt.QWidget):
 
         plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
         plt.figtext(.75, .75, " Média", fontsize = 10)
-        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.87, .75, str("%.3f" % (m)), fontsize = 10)
         plt.figtext(.75, .70, " Variância", fontsize = 10)
-        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.87, .70, str("%.3f" % (v)), fontsize = 10)
         plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
-        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.87, .65, str("%.3f" % (d)), fontsize = 10)
         plt.figtext(.75, .60, " Mínimo", fontsize = 10)
-        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.87, .60, str("%.3f" % (mi)), fontsize = 10)
         plt.figtext(.75, .55, " Máximo", fontsize = 10)
-        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.87, .55, str("%.3f" % (ma)), fontsize = 10)
         plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
-        plt.figtext(.87, .50, str(er), fontsize = 10)
+        plt.figtext(.87, .50, str("%.3f" % (er)), fontsize = 10)
         
     
         plt.xlabel('Numero de análises')  
@@ -2255,17 +2256,17 @@ class imporSA(Qt.QWidget):
 
         plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
         plt.figtext(.75, .75, " Média", fontsize = 10)
-        plt.figtext(.87, .75, str(m), fontsize = 10)
+        plt.figtext(.87, .75, str("%.3f" % (m)), fontsize = 10)
         plt.figtext(.75, .70, " Variância", fontsize = 10)
-        plt.figtext(.87, .70, str(v), fontsize = 10)
+        plt.figtext(.87, .70, str("%.3f" % (v)), fontsize = 10)
         plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
-        plt.figtext(.87, .65, str(d), fontsize = 10)
+        plt.figtext(.87, .65, str("%.3f" % (d)), fontsize = 10)
         plt.figtext(.75, .60, " Mínimo", fontsize = 10)
-        plt.figtext(.87, .60, str(mi), fontsize = 10)
+        plt.figtext(.87, .60, str("%.3f" % (mi)), fontsize = 10)
         plt.figtext(.75, .55, " Máximo", fontsize = 10)
-        plt.figtext(.87, .55, str(ma), fontsize = 10)
+        plt.figtext(.87, .55, str("%.3f" % (ma)), fontsize = 10)
         plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
-        plt.figtext(.87, .50, str(er), fontsize = 10)
+        plt.figtext(.87, .50, str("%.3f" % (er)), fontsize = 10)
         
     
         plt.xlabel('Numero de análises')  
@@ -2292,19 +2293,57 @@ class imporSA(Qt.QWidget):
         result = c.execute('SELECT Fator1 FROM Sa1')
         data = np.array(c.fetchall())
 
-        ## dados do banco
         Fator1 = []
-        for row in result:
-            Fator1.append(float(row[1]))
-        
+
+        for row in data:
+            Fator1.append(row[0])
+
         # Configuração de Visualização
-        sns.histplot(data,color='black')
+        sns.histplot(Fator1,color='cyan')
+
+        #Média
+        m = statistics.mean(Fator1)
+
+        #variância
+        v = statistics.pvariance(Fator1)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator1)
+            
+        #Mediana
+        med = statistics.median(Fator1)
+
+        #Mínimo 
+        mi = np.min(Fator1)
+
+        #Máximo
+        ma = np.max(Fator1)
+
+        #Erro Padrão
+        er = np.std(Fator1, ddof=1) / np.sqrt(np.size(Fator1))
+            
+        plt.figtext(.60, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.65, .75, " Média", fontsize = 10)
+        plt.figtext(.70, .75, str("%.3f" % (m)), fontsize = 10)
+        plt.figtext(.65, .70, " Variância", fontsize = 10)
+        plt.figtext(.73, .70, str("%.3f" % (v)), fontsize = 10)
+        plt.figtext(.65, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.74, .65, str("%.3f" % (d)), fontsize = 10)
+        plt.figtext(.65, .60, " Mediana", fontsize = 10)
+        plt.figtext(.73, .60, str("%.3f" % (med)), fontsize = 10)
+        plt.figtext(.65, .55, " Mínimo", fontsize = 10)
+        plt.figtext(.73, .55, str("%.3f" % (mi)), fontsize = 10)
+        plt.figtext(.65, .50, " Máximo", fontsize = 10)
+        plt.figtext(.73, .50, str("%.3f" % (ma)), fontsize = 10)
+        plt.figtext(.65, .45, " Erro Padrão", fontsize = 10)
+        plt.figtext(.73, .45, str("%.3f" % (er)), fontsize = 10)
+
         plt.xlabel('Fator')  
         plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=20, 
+                    fontsize=30, 
                     color="Black") 
 
         plt.show()
@@ -2317,21 +2356,57 @@ class imporSA(Qt.QWidget):
         result = c.execute('SELECT Fator2 FROM Sa1')
         data = np.array(c.fetchall())
 
-        
-
-        ## dados do banco
         Fator2 = []
-        for row in result:
-            Fator2.append(float(row[1]))
-        
+
+        for row in data:
+            Fator2.append(row[0])
+
         # Configuração de Visualização
-        sns.histplot(data,color='black')
+        sns.histplot(Fator2,color='cyan')
+
+        #Média
+        m = statistics.mean(Fator2)
+
+        #variância
+        v = statistics.pvariance(Fator2)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator2)
+            
+        #Mediana
+        med = statistics.median(Fator2)
+
+        #Mínimo 
+        mi = np.min(Fator2)
+
+        #Máximo
+        ma = np.max(Fator2)
+
+        #Erro Padrão
+        er = np.std(Fator2, ddof=1) / np.sqrt(np.size(Fator2))
+            
+        plt.figtext(.60, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.65, .75, " Média", fontsize = 10)
+        plt.figtext(.70, .75, str("%.3f" % (m)), fontsize = 10)
+        plt.figtext(.65, .70, " Variância", fontsize = 10)
+        plt.figtext(.73, .70, str("%.3f" % (v)), fontsize = 10)
+        plt.figtext(.65, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.74, .65, str("%.3f" % (d)), fontsize = 10)
+        plt.figtext(.65, .60, " Mediana", fontsize = 10)
+        plt.figtext(.73, .60, str("%.3f" % (med)), fontsize = 10)
+        plt.figtext(.65, .55, " Mínimo", fontsize = 10)
+        plt.figtext(.73, .55, str("%.3f" % (mi)), fontsize = 10)
+        plt.figtext(.65, .50, " Máximo", fontsize = 10)
+        plt.figtext(.73, .50, str("%.3f" % (ma)), fontsize = 10)
+        plt.figtext(.65, .45, " Erro Padrão", fontsize = 10)
+        plt.figtext(.73, .45, str("%.3f" % (er)), fontsize = 10)
+
         plt.xlabel('Fator')  
         plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=20, 
+                    fontsize=30, 
                     color="Black") 
 
         plt.show()
@@ -2344,21 +2419,57 @@ class imporSA(Qt.QWidget):
         result = c.execute('SELECT Fator3 FROM Sa1')
         data = np.array(c.fetchall())
 
-        
-
-        ## dados do banco
         Fator3 = []
-        for row in result:
-            Fator3.append(float(row[1]))
-        
+
+        for row in data:
+            Fator3.append(row[0])
+
         # Configuração de Visualização
-        sns.histplot(data,color='black')
+        sns.histplot(Fator3,color='cyan')
+
+        #Média
+        m = statistics.mean(Fator3)
+
+        #variância
+        v = statistics.pvariance(Fator3)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator3)
+            
+        #Mediana
+        med = statistics.median(Fator3)
+
+        #Mínimo 
+        mi = np.min(Fator3)
+
+        #Máximo
+        ma = np.max(Fator3)
+
+        #Erro Padrão
+        er = np.std(Fator3, ddof=1) / np.sqrt(np.size(Fator3))
+            
+        plt.figtext(.60, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.65, .75, " Média", fontsize = 10)
+        plt.figtext(.70, .75, str("%.3f" % (m)), fontsize = 10)
+        plt.figtext(.65, .70, " Variância", fontsize = 10)
+        plt.figtext(.73, .70, str("%.3f" % (v)), fontsize = 10)
+        plt.figtext(.65, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.74, .65, str("%.3f" % (d)), fontsize = 10)
+        plt.figtext(.65, .60, " Mediana", fontsize = 10)
+        plt.figtext(.73, .60, str("%.3f" % (med)), fontsize = 10)
+        plt.figtext(.65, .55, " Mínimo", fontsize = 10)
+        plt.figtext(.73, .55, str("%.3f" % (mi)), fontsize = 10)
+        plt.figtext(.65, .50, " Máximo", fontsize = 10)
+        plt.figtext(.73, .50, str("%.3f" % (ma)), fontsize = 10)
+        plt.figtext(.65, .45, " Erro Padrão", fontsize = 10)
+        plt.figtext(.73, .45, str("%.3f" % (er)), fontsize = 10)
+
         plt.xlabel('Fator')  
         plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=20, 
+                    fontsize=30, 
                     color="Black") 
 
         plt.show()
@@ -2371,21 +2482,57 @@ class imporSA(Qt.QWidget):
         result = c.execute('SELECT Fator4 FROM Sa1')
         data = np.array(c.fetchall())
 
-        
-
-        ## dados do banco
         Fator4 = []
-        for row in result:
-            Fator4.append(float(row[1]))
-        
+
+        for row in data:
+            Fator4.append(row[0])
+
         # Configuração de Visualização
-        sns.histplot(data,color='black')
+        sns.histplot(Fator4,color='cyan')
+
+        #Média
+        m = statistics.mean(Fator4)
+
+        #variância
+        v = statistics.pvariance(Fator4)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator4)
+            
+        #Mediana
+        med = statistics.median(Fator4)
+
+        #Mínimo 
+        mi = np.min(Fator4)
+
+        #Máximo
+        ma = np.max(Fator4)
+
+        #Erro Padrão
+        er = np.std(Fator4, ddof=1) / np.sqrt(np.size(Fator4))
+            
+        plt.figtext(.60, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.65, .75, " Média", fontsize = 10)
+        plt.figtext(.70, .75, str("%.3f" % (m)), fontsize = 10)
+        plt.figtext(.65, .70, " Variância", fontsize = 10)
+        plt.figtext(.73, .70, str("%.3f" % (v)), fontsize = 10)
+        plt.figtext(.65, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.74, .65, str("%.3f" % (d)), fontsize = 10)
+        plt.figtext(.65, .60, " Mediana", fontsize = 10)
+        plt.figtext(.73, .60, str("%.3f" % (med)), fontsize = 10)
+        plt.figtext(.65, .55, " Mínimo", fontsize = 10)
+        plt.figtext(.73, .55, str("%.3f" % (mi)), fontsize = 10)
+        plt.figtext(.65, .50, " Máximo", fontsize = 10)
+        plt.figtext(.73, .50, str("%.3f" % (ma)), fontsize = 10)
+        plt.figtext(.65, .45, " Erro Padrão", fontsize = 10)
+        plt.figtext(.73, .45, str("%.3f" % (er)), fontsize = 10)
+
         plt.xlabel('Fator')  
         plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=20, 
+                    fontsize=30, 
                     color="Black") 
 
         plt.show()
@@ -2398,21 +2545,57 @@ class imporSA(Qt.QWidget):
         result = c.execute('SELECT Fator5 FROM Sa1')
         data = np.array(c.fetchall())
 
-        
-
-        ## dados do banco
         Fator5 = []
-        for row in result:
-            Fator5.append(float(row[1]))
-        
+
+        for row in data:
+            Fator5.append(row[0])
+
         # Configuração de Visualização
-        sns.histplot(data,color='black')
+        sns.histplot(Fator5,color='cyan')
+
+        #Média
+        m = statistics.mean(Fator5)
+
+        #variância
+        v = statistics.pvariance(Fator5)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator5)
+            
+        #Mediana
+        med = statistics.median(Fator5)
+
+        #Mínimo 
+        mi = np.min(Fator5)
+
+        #Máximo
+        ma = np.max(Fator5)
+
+        #Erro Padrão
+        er = np.std(Fator5, ddof=1) / np.sqrt(np.size(Fator5))
+            
+        plt.figtext(.60, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.65, .75, " Média", fontsize = 10)
+        plt.figtext(.70, .75, str("%.3f" % (m)), fontsize = 10)
+        plt.figtext(.65, .70, " Variância", fontsize = 10)
+        plt.figtext(.73, .70, str("%.3f" % (v)), fontsize = 10)
+        plt.figtext(.65, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.74, .65, str("%.3f" % (d)), fontsize = 10)
+        plt.figtext(.65, .60, " Mediana", fontsize = 10)
+        plt.figtext(.73, .60, str("%.3f" % (med)), fontsize = 10)
+        plt.figtext(.65, .55, " Mínimo", fontsize = 10)
+        plt.figtext(.73, .55, str("%.3f" % (mi)), fontsize = 10)
+        plt.figtext(.65, .50, " Máximo", fontsize = 10)
+        plt.figtext(.73, .50, str("%.3f" % (ma)), fontsize = 10)
+        plt.figtext(.65, .45, " Erro Padrão", fontsize = 10)
+        plt.figtext(.73, .45, str("%.3f" % (er)), fontsize = 10)
+
         plt.xlabel('Fator')  
         plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=20, 
+                    fontsize=30, 
                     color="Black") 
 
         plt.show()
@@ -2425,21 +2608,57 @@ class imporSA(Qt.QWidget):
         result = c.execute('SELECT Fator6 FROM Sa1')
         data = np.array(c.fetchall())
 
-        
-
-        ## dados do banco
         Fator6 = []
-        for row in result:
-            Fator6.append(float(row[1]))
-        
+
+        for row in data:
+            Fator6.append(row[0])
+
         # Configuração de Visualização
-        sns.histplot(data,color='black')
+        sns.histplot(Fator6,color='cyan')
+
+        #Média
+        m = statistics.mean(Fator6)
+
+        #variância
+        v = statistics.pvariance(Fator6)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator6)
+            
+        #Mediana
+        med = statistics.median(Fator6)
+
+        #Mínimo 
+        mi = np.min(Fator6)
+
+        #Máximo
+        ma = np.max(Fator6)
+
+        #Erro Padrão
+        er = np.std(Fator6, ddof=1) / np.sqrt(np.size(Fator6))
+            
+        plt.figtext(.60, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.65, .75, " Média", fontsize = 10)
+        plt.figtext(.70, .75, str("%.3f" % (m)), fontsize = 10)
+        plt.figtext(.65, .70, " Variância", fontsize = 10)
+        plt.figtext(.73, .70, str("%.3f" % (v)), fontsize = 10)
+        plt.figtext(.65, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.74, .65, str("%.3f" % (d)), fontsize = 10)
+        plt.figtext(.65, .60, " Mediana", fontsize = 10)
+        plt.figtext(.73, .60, str("%.3f" % (med)), fontsize = 10)
+        plt.figtext(.65, .55, " Mínimo", fontsize = 10)
+        plt.figtext(.73, .55, str("%.3f" % (mi)), fontsize = 10)
+        plt.figtext(.65, .50, " Máximo", fontsize = 10)
+        plt.figtext(.73, .50, str("%.3f" % (ma)), fontsize = 10)
+        plt.figtext(.65, .45, " Erro Padrão", fontsize = 10)
+        plt.figtext(.73, .45, str("%.3f" % (er)), fontsize = 10)
+
         plt.xlabel('Fator')  
         plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=20, 
+                    fontsize=30, 
                     color="Black") 
 
         plt.show()
@@ -2452,21 +2671,57 @@ class imporSA(Qt.QWidget):
         result = c.execute('SELECT Fator7 FROM Sa1')
         data = np.array(c.fetchall())
 
-        
-
-        ## dados do banco
         Fator7 = []
-        for row in result:
-            Fator7.append(float(row[1]))
-        
+
+        for row in data:
+            Fator7.append(row[0])
+
         # Configuração de Visualização
-        sns.histplot(data,color='black')
+        sns.histplot(Fator7,color='cyan')
+
+        #Média
+        m = statistics.mean(Fator7)
+
+        #variância
+        v = statistics.pvariance(Fator7)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator7)
+            
+        #Mediana
+        med = statistics.median(Fator7)
+
+        #Mínimo 
+        mi = np.min(Fator7)
+
+        #Máximo
+        ma = np.max(Fator7)
+
+        #Erro Padrão
+        er = np.std(Fator7, ddof=1) / np.sqrt(np.size(Fator7))
+            
+        plt.figtext(.60, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.65, .75, " Média", fontsize = 10)
+        plt.figtext(.70, .75, str("%.3f" % (m)), fontsize = 10)
+        plt.figtext(.65, .70, " Variância", fontsize = 10)
+        plt.figtext(.73, .70, str("%.3f" % (v)), fontsize = 10)
+        plt.figtext(.65, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.74, .65, str("%.3f" % (d)), fontsize = 10)
+        plt.figtext(.65, .60, " Mediana", fontsize = 10)
+        plt.figtext(.73, .60, str("%.3f" % (med)), fontsize = 10)
+        plt.figtext(.65, .55, " Mínimo", fontsize = 10)
+        plt.figtext(.73, .55, str("%.3f" % (mi)), fontsize = 10)
+        plt.figtext(.65, .50, " Máximo", fontsize = 10)
+        plt.figtext(.73, .50, str("%.3f" % (ma)), fontsize = 10)
+        plt.figtext(.65, .45, " Erro Padrão", fontsize = 10)
+        plt.figtext(.73, .45, str("%.3f" % (er)), fontsize = 10)
+
         plt.xlabel('Fator')  
         plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=20, 
+                    fontsize=30, 
                     color="Black") 
 
         plt.show()
@@ -2479,21 +2734,57 @@ class imporSA(Qt.QWidget):
         result = c.execute('SELECT Fator8 FROM Sa1')
         data = np.array(c.fetchall())
 
-        
-
-        ## dados do banco
         Fator8 = []
-        for row in result:
-            Fator8.append(float(row[1]))
-        
+
+        for row in data:
+            Fator8.append(row[0])
+
         # Configuração de Visualização
-        sns.histplot(data,color='black')
+        sns.histplot(Fator8,color='cyan')
+
+        #Média
+        m = statistics.mean(Fator8)
+
+        #variância
+        v = statistics.pvariance(Fator8)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator8)
+            
+        #Mediana
+        med = statistics.median(Fator8)
+
+        #Mínimo 
+        mi = np.min(Fator8)
+
+        #Máximo
+        ma = np.max(Fator8)
+
+        #Erro Padrão
+        er = np.std(Fator8, ddof=1) / np.sqrt(np.size(Fator8))
+            
+        plt.figtext(.60, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.65, .75, " Média", fontsize = 10)
+        plt.figtext(.70, .75, str("%.3f" % (m)), fontsize = 10)
+        plt.figtext(.65, .70, " Variância", fontsize = 10)
+        plt.figtext(.73, .70, str("%.3f" % (v)), fontsize = 10)
+        plt.figtext(.65, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.74, .65, str("%.3f" % (d)), fontsize = 10)
+        plt.figtext(.65, .60, " Mediana", fontsize = 10)
+        plt.figtext(.73, .60, str("%.3f" % (med)), fontsize = 10)
+        plt.figtext(.65, .55, " Mínimo", fontsize = 10)
+        plt.figtext(.73, .55, str("%.3f" % (mi)), fontsize = 10)
+        plt.figtext(.65, .50, " Máximo", fontsize = 10)
+        plt.figtext(.73, .50, str("%.3f" % (ma)), fontsize = 10)
+        plt.figtext(.65, .45, " Erro Padrão", fontsize = 10)
+        plt.figtext(.73, .45, str("%.3f" % (er)), fontsize = 10)
+
         plt.xlabel('Fator')  
         plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=20, 
+                    fontsize=30, 
                     color="Black") 
 
         plt.show()
@@ -2506,19 +2797,57 @@ class imporSA(Qt.QWidget):
         result = c.execute('SELECT Fator9 FROM Sa1')
         data = np.array(c.fetchall())
 
-        ## dados do banco
         Fator9 = []
-        for row in result:
-            Fator9.append(float(row[1]))
-        
+
+        for row in data:
+            Fator9.append(row[0])
+
         # Configuração de Visualização
-        sns.histplot(data,color='black')
+        sns.histplot(Fator9,color='cyan')
+
+        #Média
+        m = statistics.mean(Fator9)
+
+        #variância
+        v = statistics.pvariance(Fator9)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator9)
+            
+        #Mediana
+        med = statistics.median(Fator9)
+
+        #Mínimo 
+        mi = np.min(Fator9)
+
+        #Máximo
+        ma = np.max(Fator9)
+
+        #Erro Padrão
+        er = np.std(Fator9, ddof=1) / np.sqrt(np.size(Fator9))
+            
+        plt.figtext(.60, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.65, .75, " Média", fontsize = 10)
+        plt.figtext(.70, .75, str("%.3f" % (m)), fontsize = 10)
+        plt.figtext(.65, .70, " Variância", fontsize = 10)
+        plt.figtext(.73, .70, str("%.3f" % (v)), fontsize = 10)
+        plt.figtext(.65, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.74, .65, str("%.3f" % (d)), fontsize = 10)
+        plt.figtext(.65, .60, " Mediana", fontsize = 10)
+        plt.figtext(.73, .60, str("%.3f" % (med)), fontsize = 10)
+        plt.figtext(.65, .55, " Mínimo", fontsize = 10)
+        plt.figtext(.73, .55, str("%.3f" % (mi)), fontsize = 10)
+        plt.figtext(.65, .50, " Máximo", fontsize = 10)
+        plt.figtext(.73, .50, str("%.3f" % (ma)), fontsize = 10)
+        plt.figtext(.65, .45, " Erro Padrão", fontsize = 10)
+        plt.figtext(.73, .45, str("%.3f" % (er)), fontsize = 10)
+
         plt.xlabel('Fator')  
         plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=20, 
+                    fontsize=30, 
                     color="Black") 
 
         plt.show()
@@ -2531,21 +2860,57 @@ class imporSA(Qt.QWidget):
         result = c.execute('SELECT Fator10 FROM Sa1')
         data = np.array(c.fetchall())
 
-        
-
-        ## dados do banco
         Fator10 = []
-        for row in result:
-            Fator10.append(float(row[1]))
-        
+
+        for row in data:
+            Fator10.append(row[0])
+
         # Configuração de Visualização
-        sns.histplot(data,color='black')
+        sns.histplot(Fator10,color='cyan')
+
+        #Média
+        m = statistics.mean(Fator10)
+
+        #variância
+        v = statistics.pvariance(Fator10)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator10)
+            
+        #Mediana
+        med = statistics.median(Fator10)
+
+        #Mínimo 
+        mi = np.min(Fator10)
+
+        #Máximo
+        ma = np.max(Fator10)
+
+        #Erro Padrão
+        er = np.std(Fator10, ddof=1) / np.sqrt(np.size(Fator10))
+            
+        plt.figtext(.60, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.65, .75, " Média", fontsize = 10)
+        plt.figtext(.70, .75, str("%.3f" % (m)), fontsize = 10)
+        plt.figtext(.65, .70, " Variância", fontsize = 10)
+        plt.figtext(.73, .70, str("%.3f" % (v)), fontsize = 10)
+        plt.figtext(.65, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.74, .65, str("%.3f" % (d)), fontsize = 10)
+        plt.figtext(.65, .60, " Mediana", fontsize = 10)
+        plt.figtext(.73, .60, str("%.3f" % (med)), fontsize = 10)
+        plt.figtext(.65, .55, " Mínimo", fontsize = 10)
+        plt.figtext(.73, .55, str("%.3f" % (mi)), fontsize = 10)
+        plt.figtext(.65, .50, " Máximo", fontsize = 10)
+        plt.figtext(.73, .50, str("%.3f" % (ma)), fontsize = 10)
+        plt.figtext(.65, .45, " Erro Padrão", fontsize = 10)
+        plt.figtext(.73, .45, str("%.3f" % (er)), fontsize = 10)
+
         plt.xlabel('Fator')  
         plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=20, 
+                    fontsize=30, 
                     color="Black") 
 
         plt.show()
@@ -2558,21 +2923,57 @@ class imporSA(Qt.QWidget):
         result = c.execute('SELECT Fator11 FROM Sa1')
         data = np.array(c.fetchall())
 
-        
-
-        ## dados do banco
         Fator11 = []
-        for row in result:
-            Fator11.append(float(row[1]))
-        
+
+        for row in data:
+            Fator11.append(row[0])
+
         # Configuração de Visualização
-        sns.histplot(data,color='black')
+        sns.histplot(Fator11,color='cyan')
+
+        #Média
+        m = statistics.mean(Fator11)
+
+        #variância
+        v = statistics.pvariance(Fator11)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator11)
+            
+        #Mediana
+        med = statistics.median(Fator11)
+
+        #Mínimo 
+        mi = np.min(Fator11)
+
+        #Máximo
+        ma = np.max(Fator11)
+
+        #Erro Padrão
+        er = np.std(Fator11, ddof=1) / np.sqrt(np.size(Fator11))
+            
+        plt.figtext(.60, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.65, .75, " Média", fontsize = 10)
+        plt.figtext(.70, .75, str("%.3f" % (m)), fontsize = 10)
+        plt.figtext(.65, .70, " Variância", fontsize = 10)
+        plt.figtext(.73, .70, str("%.3f" % (v)), fontsize = 10)
+        plt.figtext(.65, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.74, .65, str("%.3f" % (d)), fontsize = 10)
+        plt.figtext(.65, .60, " Mediana", fontsize = 10)
+        plt.figtext(.73, .60, str("%.3f" % (med)), fontsize = 10)
+        plt.figtext(.65, .55, " Mínimo", fontsize = 10)
+        plt.figtext(.73, .55, str("%.3f" % (mi)), fontsize = 10)
+        plt.figtext(.65, .50, " Máximo", fontsize = 10)
+        plt.figtext(.73, .50, str("%.3f" % (ma)), fontsize = 10)
+        plt.figtext(.65, .45, " Erro Padrão", fontsize = 10)
+        plt.figtext(.73, .45, str("%.3f" % (er)), fontsize = 10)
+
         plt.xlabel('Fator')  
         plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=20, 
+                    fontsize=30, 
                     color="Black") 
 
         plt.show()
@@ -2585,21 +2986,61 @@ class imporSA(Qt.QWidget):
         result = c.execute('SELECT Fator12 FROM Sa2')
         data = np.array(c.fetchall())
 
-        ## dados do banco
-        x = []
+                ## dados do banco
+        Fator12 = []
+
         for i in range(15):
-            x.append(eval (data[i][0]))
-        
-        x = np.array(x)
-        
+            Fator12.append(eval (data[i][0]))
+                
+        #Fator12 = np.array(Fator12)
+
+                        
         # Configuração de Visualização
-        sns.histplot(x,kde=True,stat='probability',color="black")
-        plt.xlabel('Numero aleatório')  
-        plt.ylabel('Fator')  
+        sns.histplot(Fator12,color='cyan')
+
+        #Média
+        m = statistics.mean(Fator12)
+
+        #variância
+        v = statistics.pvariance(Fator12)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator12)
+            
+        #Mediana
+        med = statistics.median(Fator12)
+
+        #Mínimo 
+        mi = np.min(Fator12)
+
+        #Máximo
+        ma = np.max(Fator12)
+
+        #Erro Padrão
+        er = np.std(Fator12, ddof=1) / np.sqrt(np.size(Fator12))
+            
+        plt.figtext(.60, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.65, .75, " Média", fontsize = 10)
+        plt.figtext(.70, .75, str("%.3f" % (m)), fontsize = 10)
+        plt.figtext(.65, .70, " Variância", fontsize = 10)
+        plt.figtext(.73, .70, str("%.3f" % (v)), fontsize = 10)
+        plt.figtext(.65, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.74, .65, str("%.3f" % (d)), fontsize = 10)
+        plt.figtext(.65, .60, " Mediana", fontsize = 10)
+        plt.figtext(.73, .60, str("%.3f" % (med)), fontsize = 10)
+        plt.figtext(.65, .55, " Mínimo", fontsize = 10)
+        plt.figtext(.73, .55, str("%.3f" % (mi)), fontsize = 10)
+        plt.figtext(.65, .50, " Máximo", fontsize = 10)
+        plt.figtext(.73, .50, str("%.3f" % (ma)), fontsize = 10)
+        plt.figtext(.65, .45, " Erro Padrão", fontsize = 10)
+        plt.figtext(.73, .45, str("%.3f" % (er)), fontsize = 10)
+
+        plt.xlabel('Fator')  
+        plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=20, 
+                    fontsize=30, 
                     color="Black") 
 
         plt.show()
@@ -2609,24 +3050,62 @@ class imporSA(Qt.QWidget):
         conn = sqlite3.connect('coletabeta.db')
         c = conn.cursor()
 
-        result = c.execute('SELECT Fator13 FROM Sa2')
+        result = c.execute('SELECT Fator12 FROM Sa2')
         data = np.array(c.fetchall())
 
-        ## dados do banco
-        x = []
+                ## dados do banco
+        Fator13 = []
+
         for i in range(15):
-            x.append(eval (data[i][0]))
-        
-        x = np.array(x)
-        
+            Fator13.append(eval (data[i][0]))
+
+                        
         # Configuração de Visualização
-        sns.histplot(x,kde=True,stat='probability',color="black")
-        plt.xlabel('Numero aleatório')  
-        plt.ylabel('Fator')  
+        sns.histplot(Fator13,color='cyan')
+
+        #Média
+        m = statistics.mean(Fator13)
+
+        #variância
+        v = statistics.pvariance(Fator13)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator13)
+            
+        #Mediana
+        med = statistics.median(Fator13)
+
+        #Mínimo 
+        mi = np.min(Fator13)
+
+        #Máximo
+        ma = np.max(Fator13)
+
+        #Erro Padrão
+        er = np.std(Fator13, ddof=1) / np.sqrt(np.size(Fator13))
+            
+        plt.figtext(.60, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.65, .75, " Média", fontsize = 10)
+        plt.figtext(.70, .75, str("%.3f" % (m)), fontsize = 10)
+        plt.figtext(.65, .70, " Variância", fontsize = 10)
+        plt.figtext(.73, .70, str("%.3f" % (v)), fontsize = 10)
+        plt.figtext(.65, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.74, .65, str("%.3f" % (d)), fontsize = 10)
+        plt.figtext(.65, .60, " Mediana", fontsize = 10)
+        plt.figtext(.73, .60, str("%.3f" % (med)), fontsize = 10)
+        plt.figtext(.65, .55, " Mínimo", fontsize = 10)
+        plt.figtext(.73, .55, str("%.3f" % (mi)), fontsize = 10)
+        plt.figtext(.65, .50, " Máximo", fontsize = 10)
+        plt.figtext(.73, .50, str("%.3f" % (ma)), fontsize = 10)
+        plt.figtext(.65, .45, " Erro Padrão", fontsize = 10)
+        plt.figtext(.73, .45, str("%.3f" % (er)), fontsize = 10)
+
+        plt.xlabel('Fator')  
+        plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=20, 
+                    fontsize=30, 
                     color="Black") 
 
         plt.show()
@@ -2639,23 +3118,59 @@ class imporSA(Qt.QWidget):
         result = c.execute('SELECT Fator14 FROM Sa2')
         data = np.array(c.fetchall())
 
-        
-
         ## dados do banco
-        x = []
+        Fator14 = []
+
         for i in range(15):
-            x.append(eval (data[i][0]))
-        
-        x = np.array(x)
-        
+            Fator14.append(eval (data[i][0]))
+
+                        
         # Configuração de Visualização
-        sns.histplot(x,kde=True,stat='probability',color="black")
-        plt.xlabel('Numero aleatório')  
-        plt.ylabel('Fator')  
+        sns.histplot(Fator14,color='cyan')
+
+        #Média
+        m = statistics.mean(Fator14)
+
+        #variância
+        v = statistics.pvariance(Fator14)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator14)
+            
+        #Mediana
+        med = statistics.median(Fator14)
+
+        #Mínimo 
+        mi = np.min(Fator14)
+
+        #Máximo
+        ma = np.max(Fator14)
+
+        #Erro Padrão
+        er = np.std(Fator14, ddof=1) / np.sqrt(np.size(Fator14))
+            
+        plt.figtext(.60, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.65, .75, " Média", fontsize = 10)
+        plt.figtext(.70, .75, str("%.3f" % (m)), fontsize = 10)
+        plt.figtext(.65, .70, " Variância", fontsize = 10)
+        plt.figtext(.73, .70, str("%.3f" % (v)), fontsize = 10)
+        plt.figtext(.65, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.74, .65, str("%.3f" % (d)), fontsize = 10)
+        plt.figtext(.65, .60, " Mediana", fontsize = 10)
+        plt.figtext(.73, .60, str("%.3f" % (med)), fontsize = 10)
+        plt.figtext(.65, .55, " Mínimo", fontsize = 10)
+        plt.figtext(.73, .55, str("%.3f" % (mi)), fontsize = 10)
+        plt.figtext(.65, .50, " Máximo", fontsize = 10)
+        plt.figtext(.73, .50, str("%.3f" % (ma)), fontsize = 10)
+        plt.figtext(.65, .45, " Erro Padrão", fontsize = 10)
+        plt.figtext(.73, .45, str("%.3f" % (er)), fontsize = 10)
+
+        plt.xlabel('Fator')  
+        plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=20, 
+                    fontsize=30, 
                     color="Black") 
 
         plt.show()
@@ -2669,20 +3184,58 @@ class imporSA(Qt.QWidget):
         data = np.array(c.fetchall())
 
         ## dados do banco
-        x = []
+        Fator15 = []
+
         for i in range(15):
-            x.append(eval (data[i][0]))
-        
-        x = np.array(x)
-        
+            Fator15.append(eval (data[i][0]))
+
+                        
         # Configuração de Visualização
-        sns.histplot(x,kde=True,stat='probability',color="black")
-        plt.xlabel('Numero aleatório')  
-        plt.ylabel('Fator')  
+        sns.histplot(Fator15,color='cyan')
+
+        #Média
+        m = statistics.mean(Fator15)
+
+        #variância
+        v = statistics.pvariance(Fator15)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator15)
+            
+        #Mediana
+        med = statistics.median(Fator15)
+
+        #Mínimo 
+        mi = np.min(Fator15)
+
+        #Máximo
+        ma = np.max(Fator15)
+
+        #Erro Padrão
+        er = np.std(Fator15, ddof=1) / np.sqrt(np.size(Fator15))
+            
+        plt.figtext(.60, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.65, .75, " Média", fontsize = 10)
+        plt.figtext(.70, .75, str("%.3f" % (m)), fontsize = 10)
+        plt.figtext(.65, .70, " Variância", fontsize = 10)
+        plt.figtext(.73, .70, str("%.3f" % (v)), fontsize = 10)
+        plt.figtext(.65, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.74, .65, str("%.3f" % (d)), fontsize = 10)
+        plt.figtext(.65, .60, " Mediana", fontsize = 10)
+        plt.figtext(.73, .60, str("%.3f" % (med)), fontsize = 10)
+        plt.figtext(.65, .55, " Mínimo", fontsize = 10)
+        plt.figtext(.73, .55, str("%.3f" % (mi)), fontsize = 10)
+        plt.figtext(.65, .50, " Máximo", fontsize = 10)
+        plt.figtext(.73, .50, str("%.3f" % (ma)), fontsize = 10)
+        plt.figtext(.65, .45, " Erro Padrão", fontsize = 10)
+        plt.figtext(.73, .45, str("%.3f" % (er)), fontsize = 10)
+
+        plt.xlabel('Fator')  
+        plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=20, 
+                    fontsize=30, 
                     color="Black") 
 
         plt.show()
@@ -2695,23 +3248,58 @@ class imporSA(Qt.QWidget):
         result = c.execute('SELECT Fator16 FROM Sa2')
         data = np.array(c.fetchall())
 
-        
+        Fator16 = []
 
-        ## dados do banco
-        x = []
         for i in range(15):
-            x.append(eval (data[i][0]))
-        
-        x = np.array(x)
-        
+            Fator16.append(eval (data[i][0]))
+
+                        
         # Configuração de Visualização
-        sns.histplot(x,kde=True,stat='probability',color="black")
-        plt.xlabel('Numero aleatório')  
-        plt.ylabel('Fator')  
+        sns.histplot(Fator16,color='cyan')
+
+        #Média
+        m = statistics.mean(Fator16)
+
+        #variância
+        v = statistics.pvariance(Fator16)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator16)
+            
+        #Mediana
+        med = statistics.median(Fator16)
+
+        #Mínimo 
+        mi = np.min(Fator16)
+
+        #Máximo
+        ma = np.max(Fator16)
+
+        #Erro Padrão
+        er = np.std(Fator16, ddof=1) / np.sqrt(np.size(Fator16))
+            
+        plt.figtext(.60, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.65, .75, " Média", fontsize = 10)
+        plt.figtext(.70, .75, str("%.3f" % (m)), fontsize = 10)
+        plt.figtext(.65, .70, " Variância", fontsize = 10)
+        plt.figtext(.73, .70, str("%.3f" % (v)), fontsize = 10)
+        plt.figtext(.65, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.74, .65, str("%.3f" % (d)), fontsize = 10)
+        plt.figtext(.65, .60, " Mediana", fontsize = 10)
+        plt.figtext(.73, .60, str("%.3f" % (med)), fontsize = 10)
+        plt.figtext(.65, .55, " Mínimo", fontsize = 10)
+        plt.figtext(.73, .55, str("%.3f" % (mi)), fontsize = 10)
+        plt.figtext(.65, .50, " Máximo", fontsize = 10)
+        plt.figtext(.73, .50, str("%.3f" % (ma)), fontsize = 10)
+        plt.figtext(.65, .45, " Erro Padrão", fontsize = 10)
+        plt.figtext(.73, .45, str("%.3f" % (er)), fontsize = 10)
+
+        plt.xlabel('Fator')  
+        plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=20, 
+                    fontsize=30, 
                     color="Black") 
 
         plt.show()
@@ -2725,20 +3313,58 @@ class imporSA(Qt.QWidget):
         data = np.array(c.fetchall())
 
         ## dados do banco
-        x = []
+        Fator17 = []
+
         for i in range(15):
-            x.append(eval (data[i][0]))
-        
-        x = np.array(x)
-        
+            Fator17.append(eval (data[i][0]))
+
+                        
         # Configuração de Visualização
-        sns.histplot(x,kde=True,stat='probability',color="black")
-        plt.xlabel('Numero aleatório')  
-        plt.ylabel('Fator')  
+        sns.histplot(Fator17,color='cyan')
+
+        #Média
+        m = statistics.mean(Fator17)
+
+        #variância
+        v = statistics.pvariance(Fator17)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator17)
+            
+        #Mediana
+        med = statistics.median(Fator17)
+
+        #Mínimo 
+        mi = np.min(Fator17)
+
+        #Máximo
+        ma = np.max(Fator17)
+
+        #Erro Padrão
+        er = np.std(Fator17, ddof=1) / np.sqrt(np.size(Fator17))
+            
+        plt.figtext(.60, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.65, .75, " Média", fontsize = 10)
+        plt.figtext(.70, .75, str("%.3f" % (m)), fontsize = 10)
+        plt.figtext(.65, .70, " Variância", fontsize = 10)
+        plt.figtext(.73, .70, str("%.3f" % (v)), fontsize = 10)
+        plt.figtext(.65, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.74, .65, str("%.3f" % (d)), fontsize = 10)
+        plt.figtext(.65, .60, " Mediana", fontsize = 10)
+        plt.figtext(.73, .60, str("%.3f" % (med)), fontsize = 10)
+        plt.figtext(.65, .55, " Mínimo", fontsize = 10)
+        plt.figtext(.73, .55, str("%.3f" % (mi)), fontsize = 10)
+        plt.figtext(.65, .50, " Máximo", fontsize = 10)
+        plt.figtext(.73, .50, str("%.3f" % (ma)), fontsize = 10)
+        plt.figtext(.65, .45, " Erro Padrão", fontsize = 10)
+        plt.figtext(.73, .45, str("%.3f" % (er)), fontsize = 10)
+
+        plt.xlabel('Fator')  
+        plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=20, 
+                    fontsize=30, 
                     color="Black") 
 
         plt.show()
@@ -2750,24 +3376,58 @@ class imporSA(Qt.QWidget):
 
         result = c.execute('SELECT Fator18 FROM Sa2')
         data = np.array(c.fetchall())
+        Fator18 = []
 
-        
-
-        ## dados do banco
-        x = []
         for i in range(15):
-            x.append(eval (data[i][0]))
-        
-        x = np.array(x)
-        
+            Fator18.append(eval (data[i][0]))
+
+                        
         # Configuração de Visualização
-        sns.histplot(x,kde=True,stat='probability',color="black")
-        plt.xlabel('Numero aleatório')  
-        plt.ylabel('Fator')  
+        sns.histplot(Fator18,color='cyan')
+
+        #Média
+        m = statistics.mean(Fator18)
+
+        #variância
+        v = statistics.pvariance(Fator18)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator18)
+            
+        #Mediana
+        med = statistics.median(Fator18)
+
+        #Mínimo 
+        mi = np.min(Fator18)
+
+        #Máximo
+        ma = np.max(Fator18)
+
+        #Erro Padrão
+        er = np.std(Fator18, ddof=1) / np.sqrt(np.size(Fator18))
+            
+        plt.figtext(.60, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.65, .75, " Média", fontsize = 10)
+        plt.figtext(.70, .75, str("%.3f" % (m)), fontsize = 10)
+        plt.figtext(.65, .70, " Variância", fontsize = 10)
+        plt.figtext(.73, .70, str("%.3f" % (v)), fontsize = 10)
+        plt.figtext(.65, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.74, .65, str("%.3f" % (d)), fontsize = 10)
+        plt.figtext(.65, .60, " Mediana", fontsize = 10)
+        plt.figtext(.73, .60, str("%.3f" % (med)), fontsize = 10)
+        plt.figtext(.65, .55, " Mínimo", fontsize = 10)
+        plt.figtext(.73, .55, str("%.3f" % (mi)), fontsize = 10)
+        plt.figtext(.65, .50, " Máximo", fontsize = 10)
+        plt.figtext(.73, .50, str("%.3f" % (ma)), fontsize = 10)
+        plt.figtext(.65, .45, " Erro Padrão", fontsize = 10)
+        plt.figtext(.73, .45, str("%.3f" % (er)), fontsize = 10)
+
+        plt.xlabel('Fator')  
+        plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=20, 
+                    fontsize=30, 
                     color="Black") 
 
         plt.show()
@@ -2781,20 +3441,58 @@ class imporSA(Qt.QWidget):
         data = np.array(c.fetchall())
 
         ## dados do banco
-        x = []
+        Fator19 = []
+
         for i in range(15):
-            x.append(eval (data[i][0]))
-        
-        x = np.array(x)
-        
+            Fator19.append(eval (data[i][0]))
+
+                        
         # Configuração de Visualização
-        sns.histplot(x,kde=True,stat='probability',color="black")
-        plt.xlabel('Numero aleatório')  
-        plt.ylabel('Fator')  
+        sns.histplot(Fator19,color='cyan')
+
+        #Média
+        m = statistics.mean(Fator19)
+
+        #variância
+        v = statistics.pvariance(Fator19)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator19)
+            
+        #Mediana
+        med = statistics.median(Fator19)
+
+        #Mínimo 
+        mi = np.min(Fator19)
+
+        #Máximo
+        ma = np.max(Fator19)
+
+        #Erro Padrão
+        er = np.std(Fator19, ddof=1) / np.sqrt(np.size(Fator19))
+            
+        plt.figtext(.60, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.65, .75, " Média", fontsize = 10)
+        plt.figtext(.70, .75, str("%.3f" % (m)), fontsize = 10)
+        plt.figtext(.65, .70, " Variância", fontsize = 10)
+        plt.figtext(.73, .70, str("%.3f" % (v)), fontsize = 10)
+        plt.figtext(.65, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.74, .65, str("%.3f" % (d)), fontsize = 10)
+        plt.figtext(.65, .60, " Mediana", fontsize = 10)
+        plt.figtext(.73, .60, str("%.3f" % (med)), fontsize = 10)
+        plt.figtext(.65, .55, " Mínimo", fontsize = 10)
+        plt.figtext(.73, .55, str("%.3f" % (mi)), fontsize = 10)
+        plt.figtext(.65, .50, " Máximo", fontsize = 10)
+        plt.figtext(.73, .50, str("%.3f" % (ma)), fontsize = 10)
+        plt.figtext(.65, .45, " Erro Padrão", fontsize = 10)
+        plt.figtext(.73, .45, str("%.3f" % (er)), fontsize = 10)
+
+        plt.xlabel('Fator')  
+        plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=20, 
+                    fontsize=30, 
                     color="Black") 
 
         plt.show()
@@ -2807,23 +3505,58 @@ class imporSA(Qt.QWidget):
         result = c.execute('SELECT Fator20 FROM Sa2')
         data = np.array(c.fetchall())
 
-        
+        Fator20 = []
 
-        ## dados do banco
-        x = []
         for i in range(15):
-            x.append(eval (data[i][0]))
-        
-        x = np.array(x)
-        
+            Fator20.append(eval (data[i][0]))
+
+                        
         # Configuração de Visualização
-        sns.histplot(x,kde=True,stat='probability',color="black")
-        plt.xlabel('Numero aleatório')  
-        plt.ylabel('Fator')  
+        sns.histplot(Fator20,color='cyan')
+
+        #Média
+        m = statistics.mean(Fator20)
+
+        #variância
+        v = statistics.pvariance(Fator20)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator20)
+            
+        #Mediana
+        med = statistics.median(Fator20)
+
+        #Mínimo 
+        mi = np.min(Fator20)
+
+        #Máximo
+        ma = np.max(Fator20)
+
+        #Erro Padrão
+        er = np.std(Fator20, ddof=1) / np.sqrt(np.size(Fator20))
+            
+        plt.figtext(.60, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.65, .75, " Média", fontsize = 10)
+        plt.figtext(.70, .75, str("%.3f" % (m)), fontsize = 10)
+        plt.figtext(.65, .70, " Variância", fontsize = 10)
+        plt.figtext(.73, .70, str("%.3f" % (v)), fontsize = 10)
+        plt.figtext(.65, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.74, .65, str("%.3f" % (d)), fontsize = 10)
+        plt.figtext(.65, .60, " Mediana", fontsize = 10)
+        plt.figtext(.73, .60, str("%.3f" % (med)), fontsize = 10)
+        plt.figtext(.65, .55, " Mínimo", fontsize = 10)
+        plt.figtext(.73, .55, str("%.3f" % (mi)), fontsize = 10)
+        plt.figtext(.65, .50, " Máximo", fontsize = 10)
+        plt.figtext(.73, .50, str("%.3f" % (ma)), fontsize = 10)
+        plt.figtext(.65, .45, " Erro Padrão", fontsize = 10)
+        plt.figtext(.73, .45, str("%.3f" % (er)), fontsize = 10)
+
+        plt.xlabel('Fator')  
+        plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=20, 
+                    fontsize=30, 
                     color="Black") 
 
         plt.show()
@@ -2837,20 +3570,58 @@ class imporSA(Qt.QWidget):
         data = np.array(c.fetchall())
 
         ## dados do banco
-        x = []
+        Fator21 = []
+
         for i in range(15):
-            x.append(eval (data[i][0]))
-        
-        x = np.array(x)
-        
+            Fator21.append(eval (data[i][0]))
+
+                        
         # Configuração de Visualização
-        sns.histplot(x,kde=True,stat='probability',color="black")
-        plt.xlabel('Numero aleatório')  
-        plt.ylabel('Fator')  
+        sns.histplot(Fator21,color='cyan')
+
+        #Média
+        m = statistics.mean(Fator21)
+
+        #variância
+        v = statistics.pvariance(Fator21)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator21)
+            
+        #Mediana
+        med = statistics.median(Fator21)
+
+        #Mínimo 
+        mi = np.min(Fator21)
+
+        #Máximo
+        ma = np.max(Fator21)
+
+        #Erro Padrão
+        er = np.std(Fator21, ddof=1) / np.sqrt(np.size(Fator21))
+            
+        plt.figtext(.60, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.65, .75, " Média", fontsize = 10)
+        plt.figtext(.70, .75, str("%.3f" % (m)), fontsize = 10)
+        plt.figtext(.65, .70, " Variância", fontsize = 10)
+        plt.figtext(.73, .70, str("%.3f" % (v)), fontsize = 10)
+        plt.figtext(.65, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.74, .65, str("%.3f" % (d)), fontsize = 10)
+        plt.figtext(.65, .60, " Mediana", fontsize = 10)
+        plt.figtext(.73, .60, str("%.3f" % (med)), fontsize = 10)
+        plt.figtext(.65, .55, " Mínimo", fontsize = 10)
+        plt.figtext(.73, .55, str("%.3f" % (mi)), fontsize = 10)
+        plt.figtext(.65, .50, " Máximo", fontsize = 10)
+        plt.figtext(.73, .50, str("%.3f" % (ma)), fontsize = 10)
+        plt.figtext(.65, .45, " Erro Padrão", fontsize = 10)
+        plt.figtext(.73, .45, str("%.3f" % (er)), fontsize = 10)
+
+        plt.xlabel('Fator')  
+        plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=20, 
+                    fontsize=30, 
                     color="Black") 
 
         plt.show()
@@ -2863,23 +3634,58 @@ class imporSA(Qt.QWidget):
         result = c.execute('SELECT Fator22 FROM Sa2')
         data = np.array(c.fetchall())
 
-        
+        Fator22 = []
 
-        ## dados do banco
-        x = []
         for i in range(15):
-            x.append(eval (data[i][0]))
-        
-        x = np.array(x)
-        
+            Fator22.append(eval (data[i][0]))
+
+                        
         # Configuração de Visualização
-        sns.histplot(x,kde=True,stat='probability',color="black")
-        plt.xlabel('Numero aleatório')  
-        plt.ylabel('Fator')  
+        sns.histplot(Fator22,color='cyan')
+
+        #Média
+        m = statistics.mean(Fator22)
+
+        #variância
+        v = statistics.pvariance(Fator22)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator22)
+            
+        #Mediana
+        med = statistics.median(Fator22)
+
+        #Mínimo 
+        mi = np.min(Fator22)
+
+        #Máximo
+        ma = np.max(Fator22)
+
+        #Erro Padrão
+        er = np.std(Fator22, ddof=1) / np.sqrt(np.size(Fator22))
+            
+        plt.figtext(.60, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.65, .75, " Média", fontsize = 10)
+        plt.figtext(.70, .75, str("%.3f" % (m)), fontsize = 10)
+        plt.figtext(.65, .70, " Variância", fontsize = 10)
+        plt.figtext(.73, .70, str("%.3f" % (v)), fontsize = 10)
+        plt.figtext(.65, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.74, .65, str("%.3f" % (d)), fontsize = 10)
+        plt.figtext(.65, .60, " Mediana", fontsize = 10)
+        plt.figtext(.73, .60, str("%.3f" % (med)), fontsize = 10)
+        plt.figtext(.65, .55, " Mínimo", fontsize = 10)
+        plt.figtext(.73, .55, str("%.3f" % (mi)), fontsize = 10)
+        plt.figtext(.65, .50, " Máximo", fontsize = 10)
+        plt.figtext(.73, .50, str("%.3f" % (ma)), fontsize = 10)
+        plt.figtext(.65, .45, " Erro Padrão", fontsize = 10)
+        plt.figtext(.73, .45, str("%.3f" % (er)), fontsize = 10)
+
+        plt.xlabel('Fator')  
+        plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=20, 
+                    fontsize=30, 
                     color="Black") 
 
         plt.show()
@@ -2893,20 +3699,58 @@ class imporSA(Qt.QWidget):
         data = np.array(c.fetchall())
 
         ## dados do banco
-        x = []
+        Fator23 = []
+
         for i in range(15):
-            x.append(eval (data[i][0]))
-        
-        x = np.array(x)
-        
+            Fator23.append(eval (data[i][0]))
+
+                        
         # Configuração de Visualização
-        sns.histplot(x,kde=True,stat='probability',color="black")
-        plt.xlabel('Numero aleatório')  
-        plt.ylabel('Fator')  
+        sns.histplot(Fator23,color='cyan')
+
+        #Média
+        m = statistics.mean(Fator23)
+
+        #variância
+        v = statistics.pvariance(Fator23)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator23)
+            
+        #Mediana
+        med = statistics.median(Fator23)
+
+        #Mínimo 
+        mi = np.min(Fator23)
+
+        #Máximo
+        ma = np.max(Fator23)
+
+        #Erro Padrão
+        er = np.std(Fator23, ddof=1) / np.sqrt(np.size(Fator23))
+            
+        plt.figtext(.60, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.65, .75, " Média", fontsize = 10)
+        plt.figtext(.70, .75, str("%.3f" % (m)), fontsize = 10)
+        plt.figtext(.65, .70, " Variância", fontsize = 10)
+        plt.figtext(.73, .70, str("%.3f" % (v)), fontsize = 10)
+        plt.figtext(.65, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.74, .65, str("%.3f" % (d)), fontsize = 10)
+        plt.figtext(.65, .60, " Mediana", fontsize = 10)
+        plt.figtext(.73, .60, str("%.3f" % (med)), fontsize = 10)
+        plt.figtext(.65, .55, " Mínimo", fontsize = 10)
+        plt.figtext(.73, .55, str("%.3f" % (mi)), fontsize = 10)
+        plt.figtext(.65, .50, " Máximo", fontsize = 10)
+        plt.figtext(.73, .50, str("%.3f" % (ma)), fontsize = 10)
+        plt.figtext(.65, .45, " Erro Padrão", fontsize = 10)
+        plt.figtext(.73, .45, str("%.3f" % (er)), fontsize = 10)
+
+        plt.xlabel('Fator')  
+        plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=20, 
+                    fontsize=30, 
                     color="Black") 
 
         plt.show()
@@ -2922,20 +3766,58 @@ class imporSA(Qt.QWidget):
         
 
         ## dados do banco
-        x = []
+        Fator24 = []
+
         for i in range(15):
-            x.append(eval (data[i][0]))
-        
-        x = np.array(x)
-        
+            Fator24.append(eval (data[i][0]))
+
+                        
         # Configuração de Visualização
-        sns.histplot(x,kde=True,stat='probability',color="black")
-        plt.xlabel('Numero aleatório')  
-        plt.ylabel('Fator')  
+        sns.histplot(Fator24,color='cyan')
+
+        #Média
+        m = statistics.mean(Fator24)
+
+        #variância
+        v = statistics.pvariance(Fator24)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator24)
+            
+        #Mediana
+        med = statistics.median(Fator24)
+
+        #Mínimo 
+        mi = np.min(Fator24)
+
+        #Máximo
+        ma = np.max(Fator24)
+
+        #Erro Padrão
+        er = np.std(Fator24, ddof=1) / np.sqrt(np.size(Fator24))
+            
+        plt.figtext(.60, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.65, .75, " Média", fontsize = 10)
+        plt.figtext(.70, .75, str("%.3f" % (m)), fontsize = 10)
+        plt.figtext(.65, .70, " Variância", fontsize = 10)
+        plt.figtext(.73, .70, str("%.3f" % (v)), fontsize = 10)
+        plt.figtext(.65, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.74, .65, str("%.3f" % (d)), fontsize = 10)
+        plt.figtext(.65, .60, " Mediana", fontsize = 10)
+        plt.figtext(.73, .60, str("%.3f" % (med)), fontsize = 10)
+        plt.figtext(.65, .55, " Mínimo", fontsize = 10)
+        plt.figtext(.73, .55, str("%.3f" % (mi)), fontsize = 10)
+        plt.figtext(.65, .50, " Máximo", fontsize = 10)
+        plt.figtext(.73, .50, str("%.3f" % (ma)), fontsize = 10)
+        plt.figtext(.65, .45, " Erro Padrão", fontsize = 10)
+        plt.figtext(.73, .45, str("%.3f" % (er)), fontsize = 10)
+
+        plt.xlabel('Fator')  
+        plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=20, 
+                    fontsize=30, 
                     color="Black") 
 
         plt.show()
@@ -2949,20 +3831,58 @@ class imporSA(Qt.QWidget):
         data = np.array(c.fetchall())
 
         ## dados do banco
-        x = []
+        Fator25 = []
+
         for i in range(15):
-            x.append(eval (data[i][0]))
-        
-        x = np.array(x)
-        
+            Fator25.append(eval (data[i][0]))
+
+                        
         # Configuração de Visualização
-        sns.histplot(x,kde=True,stat='probability',color="black")
-        plt.xlabel('Numero aleatório')  
-        plt.ylabel('Fator')  
+        sns.histplot(Fator25,color='cyan')
+
+        #Média
+        m = statistics.mean(Fator25)
+
+        #variância
+        v = statistics.pvariance(Fator25)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator25)
+            
+        #Mediana
+        med = statistics.median(Fator25)
+
+        #Mínimo 
+        mi = np.min(Fator25)
+
+        #Máximo
+        ma = np.max(Fator25)
+
+        #Erro Padrão
+        er = np.std(Fator25, ddof=1) / np.sqrt(np.size(Fator25))
+            
+        plt.figtext(.60, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.65, .75, " Média", fontsize = 10)
+        plt.figtext(.70, .75, str("%.3f" % (m)), fontsize = 10)
+        plt.figtext(.65, .70, " Variância", fontsize = 10)
+        plt.figtext(.73, .70, str("%.3f" % (v)), fontsize = 10)
+        plt.figtext(.65, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.74, .65, str("%.3f" % (d)), fontsize = 10)
+        plt.figtext(.65, .60, " Mediana", fontsize = 10)
+        plt.figtext(.73, .60, str("%.3f" % (med)), fontsize = 10)
+        plt.figtext(.65, .55, " Mínimo", fontsize = 10)
+        plt.figtext(.73, .55, str("%.3f" % (mi)), fontsize = 10)
+        plt.figtext(.65, .50, " Máximo", fontsize = 10)
+        plt.figtext(.73, .50, str("%.3f" % (ma)), fontsize = 10)
+        plt.figtext(.65, .45, " Erro Padrão", fontsize = 10)
+        plt.figtext(.73, .45, str("%.3f" % (er)), fontsize = 10)
+
+        plt.xlabel('Fator')  
+        plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=20, 
+                    fontsize=30, 
                     color="Black") 
 
         plt.show()
@@ -2978,20 +3898,58 @@ class imporSA(Qt.QWidget):
         
 
         ## dados do banco
-        x = []
+        Fator26 = []
+
         for i in range(15):
-            x.append(eval (data[i][0]))
-        
-        x = np.array(x)
-        
+            Fator26.append(eval (data[i][0]))
+
+                        
         # Configuração de Visualização
-        sns.histplot(x,kde=True,stat='probability',color="black")
-        plt.xlabel('Numero aleatório')  
-        plt.ylabel('Fator')  
+        sns.histplot(Fator26,color='cyan')
+
+        #Média
+        m = statistics.mean(Fator26)
+
+        #variância
+        v = statistics.pvariance(Fator26)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator26)
+            
+        #Mediana
+        med = statistics.median(Fator26)
+
+        #Mínimo 
+        mi = np.min(Fator26)
+
+        #Máximo
+        ma = np.max(Fator26)
+
+        #Erro Padrão
+        er = np.std(Fator26, ddof=1) / np.sqrt(np.size(Fator26))
+            
+        plt.figtext(.60, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.65, .75, " Média", fontsize = 10)
+        plt.figtext(.70, .75, str("%.3f" % (m)), fontsize = 10)
+        plt.figtext(.65, .70, " Variância", fontsize = 10)
+        plt.figtext(.73, .70, str("%.3f" % (v)), fontsize = 10)
+        plt.figtext(.65, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.74, .65, str("%.3f" % (d)), fontsize = 10)
+        plt.figtext(.65, .60, " Mediana", fontsize = 10)
+        plt.figtext(.73, .60, str("%.3f" % (med)), fontsize = 10)
+        plt.figtext(.65, .55, " Mínimo", fontsize = 10)
+        plt.figtext(.73, .55, str("%.3f" % (mi)), fontsize = 10)
+        plt.figtext(.65, .50, " Máximo", fontsize = 10)
+        plt.figtext(.73, .50, str("%.3f" % (ma)), fontsize = 10)
+        plt.figtext(.65, .45, " Erro Padrão", fontsize = 10)
+        plt.figtext(.73, .45, str("%.3f" % (er)), fontsize = 10)
+
+        plt.xlabel('Fator')  
+        plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=20, 
+                    fontsize=30, 
                     color="Black") 
 
         plt.show()
@@ -3005,20 +3963,58 @@ class imporSA(Qt.QWidget):
         data = np.array(c.fetchall())
 
         ## dados do banco
-        x = []
+        Fator27 = []
+
         for i in range(15):
-            x.append(eval (data[i][0]))
-        
-        x = np.array(x)
-        
+            Fator27.append(eval (data[i][0]))
+
+                        
         # Configuração de Visualização
-        sns.histplot(x,kde=True,stat='probability',color="black")
-        plt.xlabel('Numero aleatório')  
-        plt.ylabel('Fator')  
+        sns.histplot(Fator27,color='cyan')
+
+        #Média
+        m = statistics.mean(Fator27)
+
+        #variância
+        v = statistics.pvariance(Fator27)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator27)
+            
+        #Mediana
+        med = statistics.median(Fator27)
+
+        #Mínimo 
+        mi = np.min(Fator27)
+
+        #Máximo
+        ma = np.max(Fator27)
+
+        #Erro Padrão
+        er = np.std(Fator27, ddof=1) / np.sqrt(np.size(Fator27))
+            
+        plt.figtext(.60, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.65, .75, " Média", fontsize = 10)
+        plt.figtext(.70, .75, str("%.3f" % (m)), fontsize = 10)
+        plt.figtext(.65, .70, " Variância", fontsize = 10)
+        plt.figtext(.73, .70, str("%.3f" % (v)), fontsize = 10)
+        plt.figtext(.65, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.74, .65, str("%.3f" % (d)), fontsize = 10)
+        plt.figtext(.65, .60, " Mediana", fontsize = 10)
+        plt.figtext(.73, .60, str("%.3f" % (med)), fontsize = 10)
+        plt.figtext(.65, .55, " Mínimo", fontsize = 10)
+        plt.figtext(.73, .55, str("%.3f" % (mi)), fontsize = 10)
+        plt.figtext(.65, .50, " Máximo", fontsize = 10)
+        plt.figtext(.73, .50, str("%.3f" % (ma)), fontsize = 10)
+        plt.figtext(.65, .45, " Erro Padrão", fontsize = 10)
+        plt.figtext(.73, .45, str("%.3f" % (er)), fontsize = 10)
+
+        plt.xlabel('Fator')  
+        plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=20, 
+                    fontsize=30, 
                     color="Black") 
 
         plt.show()
@@ -3032,20 +4028,58 @@ class imporSA(Qt.QWidget):
         data = np.array(c.fetchall())
 
         ## dados do banco
-        x = []
+        Fator28 = []
+
         for i in range(15):
-            x.append(eval (data[i][0]))
-        
-        x = np.array(x)
-        
+            Fator28.append(eval (data[i][0]))
+
+                        
         # Configuração de Visualização
-        sns.histplot(x,kde=True,stat='probability',color="black")
-        plt.xlabel('Numero aleatório')  
-        plt.ylabel('Fator')  
+        sns.histplot(Fator28,color='cyan')
+
+        #Média
+        m = statistics.mean(Fator28)
+
+        #variância
+        v = statistics.pvariance(Fator28)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator28)
+            
+        #Mediana
+        med = statistics.median(Fator28)
+
+        #Mínimo 
+        mi = np.min(Fator28)
+
+        #Máximo
+        ma = np.max(Fator28)
+
+        #Erro Padrão
+        er = np.std(Fator28, ddof=1) / np.sqrt(np.size(Fator28))
+            
+        plt.figtext(.60, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.65, .75, " Média", fontsize = 10)
+        plt.figtext(.70, .75, str("%.3f" % (m)), fontsize = 10)
+        plt.figtext(.65, .70, " Variância", fontsize = 10)
+        plt.figtext(.73, .70, str("%.3f" % (v)), fontsize = 10)
+        plt.figtext(.65, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.74, .65, str("%.3f" % (d)), fontsize = 10)
+        plt.figtext(.65, .60, " Mediana", fontsize = 10)
+        plt.figtext(.73, .60, str("%.3f" % (med)), fontsize = 10)
+        plt.figtext(.65, .55, " Mínimo", fontsize = 10)
+        plt.figtext(.73, .55, str("%.3f" % (mi)), fontsize = 10)
+        plt.figtext(.65, .50, " Máximo", fontsize = 10)
+        plt.figtext(.73, .50, str("%.3f" % (ma)), fontsize = 10)
+        plt.figtext(.65, .45, " Erro Padrão", fontsize = 10)
+        plt.figtext(.73, .45, str("%.3f" % (er)), fontsize = 10)
+
+        plt.xlabel('Fator')  
+        plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=20, 
+                    fontsize=30, 
                     color="Black") 
 
         plt.show()
@@ -3058,21 +4092,58 @@ class imporSA(Qt.QWidget):
         result = c.execute('SELECT Fator29 FROM Sa3')
         data = np.array(c.fetchall())
 
-        ## dados do banco
-        x = []
+        Fator29 = []
+
         for i in range(15):
-            x.append(eval (data[i][0]))
-        
-        x = np.array(x)
-        
+            Fator29.append(eval (data[i][0]))
+
+                        
         # Configuração de Visualização
-        sns.histplot(x,kde=True,stat='probability',color="black")
-        plt.xlabel('Numero aleatório')  
-        plt.ylabel('Fator')  
+        sns.histplot(Fator29,color='cyan')
+
+        #Média
+        m = statistics.mean(Fator29)
+
+        #variância
+        v = statistics.pvariance(Fator29)
+
+        #Desvio Padrão
+        d = statistics.stdev(Fator29)
+            
+        #Mediana
+        med = statistics.median(Fator29)
+
+        #Mínimo 
+        mi = np.min(Fator29)
+
+        #Máximo
+        ma = np.max(Fator29)
+
+        #Erro Padrão
+        er = np.std(Fator29, ddof=1) / np.sqrt(np.size(Fator29))
+            
+        plt.figtext(.60, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
+        plt.figtext(.65, .75, " Média", fontsize = 10)
+        plt.figtext(.70, .75, str("%.3f" % (m)), fontsize = 10)
+        plt.figtext(.65, .70, " Variância", fontsize = 10)
+        plt.figtext(.73, .70, str("%.3f" % (v)), fontsize = 10)
+        plt.figtext(.65, .65, " Desvio Padrão", fontsize = 10)
+        plt.figtext(.74, .65, str("%.3f" % (d)), fontsize = 10)
+        plt.figtext(.65, .60, " Mediana", fontsize = 10)
+        plt.figtext(.73, .60, str("%.3f" % (med)), fontsize = 10)
+        plt.figtext(.65, .55, " Mínimo", fontsize = 10)
+        plt.figtext(.73, .55, str("%.3f" % (mi)), fontsize = 10)
+        plt.figtext(.65, .50, " Máximo", fontsize = 10)
+        plt.figtext(.73, .50, str("%.3f" % (ma)), fontsize = 10)
+        plt.figtext(.65, .45, " Erro Padrão", fontsize = 10)
+        plt.figtext(.73, .45, str("%.3f" % (er)), fontsize = 10)
+
+        plt.xlabel('Fator')  
+        plt.ylabel('Frequência')  
                 
         # Configuração do título e cor do gráfico
         plt.title(label="Histograma", 
-                    fontsize=20, 
+                    fontsize=30, 
                     color="Black") 
 
         plt.show()
@@ -3083,6 +4154,7 @@ class Widget(Qt.QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Visualização de Dados")
+        self.setWindowIcon(QtGui.QIcon('logo.png'))
         
         layout = Qt.QVBoxLayout(self)
 

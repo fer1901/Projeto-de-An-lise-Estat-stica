@@ -40,17 +40,19 @@ def graph_data():
 
     #Desvio Padrão
     d = statistics.stdev(Fator2)
+    
+    #Mediana
+    med = statistics.median(Fator2)
 
     #Mínimo 
-    mi = statistics.median_low(Fator2)
+    mi = np.min(Fator2)
 
     #Máximo
-    ma = statistics.median_high(Fator2)
+    ma = np.max(Fator2)
 
     #Erro Padrão
     er = np.std(Fator2, ddof=1) / np.sqrt(np.size(Fator2))
-
-
+    
     plt.figtext(.74, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
     plt.figtext(.75, .75, " Média", fontsize = 10)
     plt.figtext(.87, .75, str(m), fontsize = 10)
@@ -58,12 +60,14 @@ def graph_data():
     plt.figtext(.87, .70, str(v), fontsize = 10)
     plt.figtext(.75, .65, " Desvio Padrão", fontsize = 10)
     plt.figtext(.87, .65, str(d), fontsize = 10)
-    plt.figtext(.75, .60, " Mínimo", fontsize = 10)
-    plt.figtext(.87, .60, str(mi), fontsize = 10)
-    plt.figtext(.75, .55, " Máximo", fontsize = 10)
-    plt.figtext(.87, .55, str(ma), fontsize = 10)
-    plt.figtext(.75, .50, " Erro Padrão", fontsize = 10)
-    plt.figtext(.87, .50, str(er), fontsize = 10)
+    plt.figtext(.75, .60, " Mediana", fontsize = 10)
+    plt.figtext(.87, .60, str(med), fontsize = 10)
+    plt.figtext(.75, .55, " Mínimo", fontsize = 10)
+    plt.figtext(.87, .55, str(mi), fontsize = 10)
+    plt.figtext(.75, .50, " Máximo", fontsize = 10)
+    plt.figtext(.87, .50, str(ma), fontsize = 10)
+    plt.figtext(.75, .45, " Erro Padrão", fontsize = 10)
+    plt.figtext(.87, .45, str(er), fontsize = 10)
      
    
     plt.xlabel('Numero de análises')  

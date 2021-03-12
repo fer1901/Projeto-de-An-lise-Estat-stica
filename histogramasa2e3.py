@@ -21,41 +21,44 @@ import numpy as np
 conn = sqlite3.connect('coletabeta.db')
 c = conn.cursor()
 
-result = c.execute('SELECT Fator2 FROM Sa1')
+result = c.execute('SELECT Fator12 FROM Sa2')
 data = np.array(c.fetchall())
 
-Fator2 = []
+        ## dados do banco
+Fator12 = []
 
-for row in data:
-    Fator2.append(row[0])
+for i in range(15):
+    Fator12.append(eval (data[i][0]))
 
+print(Fator12)
+        
 # Configuração de Visualização
-sns.histplot(Fator2,color='cyan')
+sns.histplot(Fator12,color='cyan')
 
 #Média
-m = statistics.mean(Fator2)
+m = statistics.mean(Fator12)
 
 #variância
-v = statistics.pvariance(Fator2)
+v = statistics.pvariance(Fator12)
 
 #Desvio Padrão
-d = statistics.stdev(Fator2)
+d = statistics.stdev(Fator12)
     
 #Mediana
-med = statistics.median(Fator2)
+med = statistics.median(Fator12)
 
 #Mínimo 
-mi = np.min(Fator2)
+mi = np.min(Fator12)
 
 #Máximo
-ma = np.max(Fator2)
+ma = np.max(Fator12)
 
 #Erro Padrão
-er = np.std(Fator2, ddof=1) / np.sqrt(np.size(Fator2))
+er = np.std(Fator12, ddof=1) / np.sqrt(np.size(Fator12))
     
 plt.figtext(.60, .8, "Dados Estatísticos", color="Gray", fontsize = 14)
 plt.figtext(.65, .75, " Média", fontsize = 10)
-plt.figtext(.70, .75, str("%.3f" % (m)), fontsize = 10)
+plt.figtext(.70, .75, str(m), fontsize = 10)
 plt.figtext(.65, .70, " Variância", fontsize = 10)
 plt.figtext(.73, .70, str(v), fontsize = 10)
 plt.figtext(.65, .65, " Desvio Padrão", fontsize = 10)

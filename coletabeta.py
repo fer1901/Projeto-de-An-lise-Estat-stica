@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS Sa2 (
 );
 ''')
 
-print("Conectado ao banco de dados do SA2b")
+print("Conectado ao banco de dados do SA2")
 
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS Sa3 (
@@ -70,5 +70,5 @@ CREATE TABLE IF NOT EXISTS Sa3 (
 );
 ''')
 
-print("Conectado ao banco de dados do SA3b")
+print("Conectado ao banco de dados do SA3")
 
