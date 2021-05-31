@@ -39,22 +39,6 @@ import numpy as np
 import pandas as pd
 style.use('fivethirtyeight')
 
-class adf1(Qt.QWidget):
-    
-    def __init__(self):
-        super().__init__()
-        self.title = 'Análise real de fatores'
-        self.setWindowIcon(QtGui.QIcon('logo.png'))
-        self.left = 0
-        self.top = 0
-        self.width = 200
-        self.height = 200
-   
-        self.setWindowTitle(self.title) 
-        self.setGeometry(self.left, self.top, self.width, self.height) 
-
-        self.show() 
-
 #Classe da janela de análise
 class imporSA(Qt.QWidget):
 
@@ -4190,14 +4174,10 @@ class Widget(Qt.QWidget):
         btn4 = Qt.QPushButton("Gráfico")
         btn4.clicked.connect(self.grafico)
 
-        btn5 = Qt.QPushButton("Análise dos Fatores")
-        btn5.clicked.connect(self.adf)
-
         btn_layout.addWidget(btn1)
         btn_layout.addWidget(btn2)
         btn_layout.addWidget(btn3)
         btn_layout.addWidget(btn4)
-        btn_layout.addWidget(btn5)
         
         self.tableWidget = QTableWidget()
         self.tableWidget.setRowCount(5)
@@ -4266,11 +4246,6 @@ class Widget(Qt.QWidget):
         self.anotherwindow = imporSA()
         self.anotherwindow.show()
         
-#Função que chama a janela com os botões de geração dos gráficos
-
-    def adf(self):
-        self.anotherwindow = adf1()
-        self.anotherwindow.show()
 
 if __name__ == '__main__':
     app = Qt.QApplication([])
