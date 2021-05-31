@@ -40,11 +40,29 @@ import pandas as pd
 style.use('fivethirtyeight')
 
 #Classe da janela de análise
+
+class analisededados(Qt.QWidget):
+
+    def __init__(self):
+        super().__init__()
+        self.title = 'Análise estatística de dados'
+        self.setWindowIcon(QtGui.QIcon('logo.png'))
+        self.left = 0
+        self.top = 0
+        self.width = 200
+        self.height = 200
+   
+        self.setWindowTitle(self.title) 
+        self.setGeometry(self.left, self.top, self.width, self.height) 
+
+        self.show() 
+
+
 class imporSA(Qt.QWidget):
 
     def __init__(self):
         super().__init__()
-        self.title = 'Análise estatística de fatores'
+        self.title = 'Gráfico dos dados'
         self.setWindowIcon(QtGui.QIcon('logo.png'))
         self.left = 0
         self.top = 0
@@ -4164,20 +4182,26 @@ class Widget(Qt.QWidget):
 
 #Botões funcionais da janela de visualização 
 
-        btn1 = Qt.QPushButton("Análise SA1")
+        btn1 = Qt.QPushButton("Dados SA1")
         btn1.clicked.connect(self.loadtable1)
-        btn2 = Qt.QPushButton("Análise SA2")
+
+        btn2 = Qt.QPushButton("Dados SA2")
         btn2.clicked.connect(self.loadtable2)
-        btn3 = Qt.QPushButton("Análise SA3")
+
+        btn3 = Qt.QPushButton("Dados SA3")
         btn3.clicked.connect(self.loadtable3)
-        
-        btn4 = Qt.QPushButton("Gráfico")
+
+        btn4 = Qt.QPushButton("Gráficos")
         btn4.clicked.connect(self.grafico)
+
+        btn5 = Qt.QPushButton("Análise de dados")
+        btn5.clicked.connect(self.Add)
 
         btn_layout.addWidget(btn1)
         btn_layout.addWidget(btn2)
         btn_layout.addWidget(btn3)
         btn_layout.addWidget(btn4)
+        btn_layout.addWidget(btn5)
         
         self.tableWidget = QTableWidget()
         self.tableWidget.setRowCount(5)
@@ -4246,6 +4270,9 @@ class Widget(Qt.QWidget):
         self.anotherwindow = imporSA()
         self.anotherwindow.show()
         
+    def Add(self):
+        self.anotherwindow = analisededados()
+        self.anotherwindow.show()    
 
 if __name__ == '__main__':
     app = Qt.QApplication([])
