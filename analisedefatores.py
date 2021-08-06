@@ -37,6 +37,7 @@ from matplotlib import style
 import statistics
 import numpy as np
 import pandas as pd
+
 style.use('fivethirtyeight')
 
 #Classe da janela de análise
